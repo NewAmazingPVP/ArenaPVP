@@ -6,7 +6,7 @@ import org.bukkit.plugin.java.JavaPlugin;
 public final class ArenaPVP extends JavaPlugin {
 
     public static ArenaPVP arenaPVP;
-    private FileConfiguration config;
+    public static FileConfiguration config;
 
     @Override
     public void onEnable() {

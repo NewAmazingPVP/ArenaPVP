@@ -1,34 +1,20 @@
 package newamazingpvp.arenapvp.utility;
 
-import org.bukkit.ChatColor;
-import org.bukkit.scheduler.BukkitRunnable;
-import org.yaml.snakeyaml.Yaml;
-
-import java.io.*;
-import java.net.HttpURLConnection;
-import java.net.URL;
-import java.util.Map;
-import java.util.Objects;
-
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.bukkit.ChatColor;
 import org.bukkit.scheduler.BukkitRunnable;
-import org.yaml.snakeyaml.Yaml;
 
 import java.io.*;
 import java.net.HttpURLConnection;
 import java.net.URL;
-import java.util.Map;
 import java.util.Objects;
 
 import static newamazingpvp.arenapvp.ArenaPVP.arenaPVP;
 
 public class AutoUpload {
-    private static final String RELEASE_URL = "https://api.github.com/repos/NewAmazingPVP/ElementalArtifacts/releases/latest";
-    private static final String API_KEY_FILE_PATH = arenaPVP.getDataFolder().getPath() + File.separator + "api.yml";
-    private static String apiKey;
-    private static String defaultUrl = "https://api.github.com/repos/NewAmazingPVP/ElementalArtifacts/releases/latest";
+    private static final String RELEASE_URL = "https://api.github.com/repos/NewAmazingPVP/ArenaPVP/releases/latest";
+    private static String defaultUrl = "https://api.github.com/repos/NewAmazingPVP/ArenaPVP/releases/latest";
     private static String downloadUrl = null;
 
     public static void startReleaseChecker() {
@@ -43,27 +29,8 @@ public class AutoUpload {
         }.runTaskTimerAsynchronously(arenaPVP, 0L, 300L);
     }
 
-    private static void loadApiKey() {
-        try {
-            File file = new File(API_KEY_FILE_PATH);
-            if (!file.exists()) {
-                arenaPVP.getLogger().info("api.yml file not found. Please create the file and add your API key.");
-                return;
-            }
-
-            Yaml yaml = new Yaml();
-            Map<String, String> data = yaml.load(new FileInputStream(file));
-            apiKey = data.get("api_key");
-        } catch (FileNotFoundException e) {
-            arenaPVP.getLogger().info("Failed to load api.yml file: " + e.getMessage());
-        }
-    }
-
     private static synchronized String getApiKey() {
-        if (apiKey == null) {
-            loadApiKey();
-        }
-        return apiKey;
+        return arenaPVP.getConfig().getString("key");
     }
 
     private static void checkForNewRelease() {
@@ -92,8 +59,8 @@ public class AutoUpload {
                     }
                 }
                 if (!(Objects.equals(downloadUrl, defaultUrl)) && downloadUrl != null) {
-                    arenaPVP.getServer().broadcastMessage(ChatColor.GREEN + "New ElementalArtifacts plugin release available. Updating plugin...");
-                    updatePlugin(downloadUrl, "ElementalArtifacts-1.0");
+                    arenaPVP.getServer().broadcastMessage(ChatColor.GREEN + "New ArenaPVP plugin release available. Updating plugin...");
+                    updatePlugin(downloadUrl, "ArenaPVP-1.0");
                 }
             } else {
                 arenaPVP.getLogger().info("Failed to check for new releases. Response code: " + connection.getResponseCode());
@@ -117,7 +84,7 @@ public class AutoUpload {
                 out.write(buffer, 0, bytesRead);
             }
             defaultUrl = downloadUrl;
-            arenaPVP.getServer().broadcastMessage(ChatColor.AQUA + "ElementalArtifacts plugin updated, restart server now...");
+            arenaPVP.getServer().broadcastMessage(ChatColor.AQUA + "ArenaPVP plugin updated, restart server now...");
         } catch (IOException e) {
             arenaPVP.getServer().broadcastMessage(ChatColor.RED + "Failed to download plugin: " + e.getMessage());
             e.printStackTrace();
