@@ -1,0 +1,4 @@
+name: ArenaPVP
+version: '${project.version}'
+main: newamazingpvp.arenapvp.ArenaPVP
+api-version: '1.20'
