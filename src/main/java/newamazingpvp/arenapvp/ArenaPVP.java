@@ -1,5 +1,6 @@
 package newamazingpvp.arenapvp;
 
+import newamazingpvp.arenapvp.GeberalListeners.KillTest1;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.plugin.java.JavaPlugin;
 
@@ -19,6 +20,11 @@ public final class ArenaPVP extends JavaPlugin {
         config = getConfig();
         arenaPVP = this;
         startReleaseChecker();
+
+
+        //Initialize things ig
+        getServer().getPluginManager().registerEvents(new KillTest1(), this);
+
     }
 
     @Override
