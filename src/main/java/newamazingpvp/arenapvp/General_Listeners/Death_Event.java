@@ -14,10 +14,11 @@ public class Death_Event implements Listener {
     @EventHandler
     public void onPlayerDeath(PlayerDeathEvent e) {
         Player player = e.getPlayer();
+        String playerName = player.getName();
         for (Player playeronline : Bukkit.getOnlinePlayers()) {
-            playeronline.sendMessage(ChatColor.BOLD + "" + ChatColor.DARK_RED + player + ChatColor.RED + " Has Died!");
+            playeronline.sendMessage(ChatColor.BOLD + "" + ChatColor.DARK_RED + playerName + ChatColor.RED + " Has Died!");
         }
-        //cansel the death (in a way that will not break the game and your client)
+        //Just in case someone is stupid enough to change game rules
         e.setDeathMessage(null);
         e.setDroppedExp(0);
         e.getDrops().clear();
@@ -27,10 +28,8 @@ public class Death_Event implements Listener {
         player.sendTitle(ChatColor.RED + "" + ChatColor.BOLD + "You Died", "", 0, 70, 20);
 
 
-        //possible respawn locations
-        Location loc1 = new Location(e.getEntity().getWorld(), 25, 111, 62);
-
-        player.setBedSpawnLocation(loc1);
+        //Location loc1 = new Location(e.getEntity().getWorld(), 25, 111, 62);
+        //player.setBedSpawnLocation(loc1);
     }
 }
 
