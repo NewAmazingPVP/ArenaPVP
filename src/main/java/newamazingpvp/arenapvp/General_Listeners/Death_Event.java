@@ -30,7 +30,7 @@ public class Death_Event implements Listener {
         //possible respawn locations
         Location loc1 = new Location(e.getEntity().getWorld(), 25, 111, 62);
 
-        e.getEntity().teleport(loc1);
+        player.setBedSpawnLocation(loc1);
     }
 }
 
