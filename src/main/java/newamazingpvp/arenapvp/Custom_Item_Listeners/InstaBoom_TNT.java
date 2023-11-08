@@ -31,10 +31,10 @@ public class InstaBoom_TNT implements Listener {
         }
     }
 
-    public void onPlayerPlaceInstaboomTNT(BlockPlaceEvent e) {
+    /*public void onPlayerPlaceInstaboomTNT(BlockPlaceEvent e) {
         Location location = e.getBlock().getLocation();
         if (e.getBlock().getType() == Material.getMaterial(ChatColor.RED + "" + ChatColor.BOLD + "InstaBoom TNT")) {
             location.getWorld().spawnParticle(Particle.EXPLOSION_LARGE, location, 10);
         }
     }
-}
+}*/
