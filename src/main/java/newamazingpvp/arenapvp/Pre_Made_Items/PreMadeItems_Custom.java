@@ -21,7 +21,8 @@ public class PreMadeItems_Custom {
         SI.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
         List<String> BL = new ArrayList<>();
         BL.add(ChatColor.GREEN + "When placed, it will instantly");
-        BL.add(ChatColor.GREEN + "explode dealing damage to ALL PLAYERS in range.");
+        BL.add(ChatColor.GREEN + "explode dealing damage to");
+        BL.add(ChatColor.GREEN + "ALL PLAYERS in range.");
         BL.add(" ");
         BL.add(ChatColor.DARK_AQUA + "If a player has the InstaBoom");
         BL.add(ChatColor.DARK_AQUA + "Enchant they are immune to it.");
