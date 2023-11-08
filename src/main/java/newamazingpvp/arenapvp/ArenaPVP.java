@@ -3,6 +3,7 @@ package newamazingpvp.arenapvp;
 import newamazingpvp.arenapvp.General_Listeners.Death_Event;
 import newamazingpvp.arenapvp.General_Listeners.PlayerCount;
 import newamazingpvp.arenapvp.Kill_Streak_Info.Kill_Listener;
+import newamazingpvp.arenapvp.User_Commands.OnlinePlayers;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.plugin.java.JavaPlugin;
 
@@ -28,6 +29,8 @@ public final class ArenaPVP extends JavaPlugin {
         getServer().getPluginManager().registerEvents(new Kill_Listener(), this);
         getServer().getPluginManager().registerEvents(new Death_Event(), this);
         getServer().getPluginManager().registerEvents(new PlayerCount(), this);
+        //commands
+        getCommand("howmanyplayersareonline").setExecutor(new OnlinePlayers());
 
 
     }

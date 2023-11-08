@@ -2,3 +2,7 @@ name: ArenaPVP
 version: '${project.version}'
 main: newamazingpvp.arenapvp.ArenaPVP
 api-version: '1.20'
+commands:
+  howmanyplayersareonline:
+    description: Says how meany players are online.
+    usage: /howmanyplayersareonline
