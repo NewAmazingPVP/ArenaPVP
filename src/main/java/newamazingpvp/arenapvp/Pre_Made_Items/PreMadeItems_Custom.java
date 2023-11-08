@@ -20,9 +20,11 @@ public class PreMadeItems_Custom {
         SI.setDisplayName(ChatColor.RED + "" + ChatColor.BOLD + "InstaBoom TNT");
         SI.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
         List<String> BL = new ArrayList<>();
+        BL.add(ChatColor.GREEN + "When placed, it will instantly");
+        BL.add(ChatColor.GREEN + "explode dealing damage to ALL PLAYERS in range.");
         BL.add(" ");
-        BL.add(ChatColor.GREEN + "When placed, it will instantly explode dealing damage to ALL PLAYERS in range.");
-        BL.add(ChatColor.GREEN + "If a player has the InstaBoom Enchant they are immune to it.");
+        BL.add(ChatColor.DARK_AQUA + "If a player has the InstaBoom");
+        BL.add(ChatColor.DARK_AQUA + "Enchant they are immune to it.");
         SI.setLore(BL);
         SI.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
         InstaBoomTNT.setItemMeta(SI);
