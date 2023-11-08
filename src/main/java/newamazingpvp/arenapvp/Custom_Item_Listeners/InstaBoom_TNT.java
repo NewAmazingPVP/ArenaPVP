@@ -26,10 +26,10 @@ public class InstaBoom_TNT implements Listener {
                     onlineplayer.playSound(player.getLocation(), Sound.ENTITY_GENERIC_EXPLODE, 1.0f, 1.0f);
 
                 }
-
             }
         }
     }
+}
 
     /*public void onPlayerPlaceInstaboomTNT(BlockPlaceEvent e) {
         Location location = e.getBlock().getLocation();
