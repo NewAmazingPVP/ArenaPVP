@@ -14,16 +14,13 @@ public class Death_Event implements Listener {
     @EventHandler
     public void onPlayerDeath(PlayerDeathEvent e) {
         Player player = e.getPlayer();
-        String playerName = player.getName();
-        for (Player playeronline : Bukkit.getOnlinePlayers()) {
-            playeronline.sendMessage(ChatColor.DARK_RED + "" + ChatColor.BOLD + playerName + ChatColor.RED + " Has Died! ☠");
-        }
         //Just in case someone is stupid enough to change game rules
         e.setDeathMessage(null);
         e.setDroppedExp(0);
         e.getDrops().clear();
 
         //death visuals
+        player.sendMessage(ChatColor.RED + "" + ChatColor.BOLD + "Death!" + ChatColor.DARK_RED + " You Died! ☠");
         player.playSound(player.getLocation(), Sound.ENTITY_ZOMBIE_ATTACK_IRON_DOOR, 2.0f, 2.0f);
         player.sendTitle(ChatColor.RED + "" + ChatColor.BOLD + "You Died", "", 0, 70, 20);
 

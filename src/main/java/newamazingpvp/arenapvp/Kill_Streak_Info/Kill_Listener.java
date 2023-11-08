@@ -17,7 +17,7 @@ public class Kill_Listener implements Listener {
     @EventHandler
     public void onPlayerInteract(EntityDeathEvent e) {
         Player killer = e.getEntity().getKiller();
-        killer.sendMessage(ChatColor.GREEN + "" + ChatColor.BOLD + "KILL!" + ChatColor.AQUA + " +12XP");
+        killer.sendMessage(ChatColor.GREEN + "" + ChatColor.BOLD + "KILL!" + ChatColor.AQUA + " +12XP ⚔");
         killer.playSound(killer.getLocation(), Sound.ENTITY_EXPERIENCE_ORB_PICKUP, 2.0f, 2.0f);
         killer.playSound(killer.getLocation(), Sound.ENTITY_EXPERIENCE_ORB_PICKUP, 2.0f, 2.0f);
         Location loc = e.getEntity().getLocation();
