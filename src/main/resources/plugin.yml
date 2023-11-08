@@ -6,3 +6,7 @@ commands:
   howmanyplayersareonline:
     description: Says how meany players are online.
     usage: /howmanyplayersareonline
+
+  give_InstaBoomTNT:
+    description: Gives InstaBoomTNT
+    usage: /give_instaboomtnt
