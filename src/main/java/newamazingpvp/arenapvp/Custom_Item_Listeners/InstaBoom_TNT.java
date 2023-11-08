@@ -17,8 +17,9 @@ public class InstaBoom_TNT implements Listener {
     public void onPlayerPlaceInstaboomTNT(PlayerInteractEvent e) {
 
         Player player = e.getPlayer();
+        player.sendMessage("test1");
 
-        if (e.getAction().equals(Action.RIGHT_CLICK_BLOCK) || e.getAction().equals(Action.RIGHT_CLICK_BLOCK)) {
+        if (e.getAction().equals(Action.RIGHT_CLICK_BLOCK) || e.getAction().equals(Action.RIGHT_CLICK_AIR)) {
             if (e.getMaterial() == Material.getMaterial(ChatColor.RED + "" + ChatColor.BOLD + "InstaBoom TNT")) {
                 e.setCancelled(true);
 
@@ -32,6 +33,10 @@ public class InstaBoom_TNT implements Listener {
 
 
     public void onPlayerPlaceInstaboomTNT(BlockPlaceEvent e) {
+
+        Player player = e.getPlayer();
+        player.sendMessage("test2");
+
         Location location = e.getBlock().getLocation();
         if (e.getBlock().getType() == Material.getMaterial(ChatColor.RED + "" + ChatColor.BOLD + "InstaBoom TNT")) {
             location.getWorld().spawnParticle(Particle.EXPLOSION_LARGE, location, 10);
