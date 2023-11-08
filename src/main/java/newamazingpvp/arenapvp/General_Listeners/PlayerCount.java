@@ -5,17 +5,25 @@ import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.entity.PlayerDeathEvent;
 import org.bukkit.event.player.PlayerJoinEvent;
+import org.bukkit.event.player.PlayerQuitEvent;
 
 
 public class PlayerCount implements Listener {
 
-    int onlineplayers;
+    public int onlineplayers;
 
     @EventHandler
-    public void onplayerjoin(PlayerJumpEvent e) {
+    public void onplayerjoin(PlayerJoinEvent e) {
 
-        e.setCancelled(true);
+        e.setJoinMessage(null);
+        onlineplayers += 1;
 
+    }
+
+    @EventHandler
+    public void onplayerleave(PlayerQuitEvent e) {
+
+        onlineplayers -=1;
 
     }
 }
