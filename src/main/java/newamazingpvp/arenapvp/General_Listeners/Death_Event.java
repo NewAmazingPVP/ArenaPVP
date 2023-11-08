@@ -16,7 +16,7 @@ public class Death_Event implements Listener {
         Player player = e.getPlayer();
         String playerName = player.getName();
         for (Player playeronline : Bukkit.getOnlinePlayers()) {
-            playeronline.sendMessage(ChatColor.BOLD + "" + ChatColor.DARK_RED + playerName + ChatColor.RED + " Has Died!");
+            playeronline.sendMessage(ChatColor.DARK_RED + "" + ChatColor.BOLD + playerName + ChatColor.RED + " Has Died! ☠");
         }
         //Just in case someone is stupid enough to change game rules
         e.setDeathMessage(null);
