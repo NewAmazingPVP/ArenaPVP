@@ -1,4 +1,4 @@
-package newamazingpvp.arenapvp.GeberalListeners;
+package newamazingpvp.arenapvp.Kill_Streak_Info;
 
 import org.bukkit.ChatColor;
 import org.bukkit.Location;
@@ -8,17 +8,16 @@ import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.entity.EntityDeathEvent;
-import org.bukkit.event.player.PlayerInteractEvent;
 
-public class KillTest1 implements Listener {
+import java.util.UUID;
 
-    int streak;
+public class Kill_Listener implements Listener {
+
 
     @EventHandler
     public void onPlayerInteract(EntityDeathEvent e) {
         Player killer = e.getEntity().getKiller();
-        streak +=1;
-        killer.sendMessage(ChatColor.GREEN + "" + ChatColor.BOLD + "KILL!" + ChatColor.AQUA + " +12XP" + ChatColor.GOLD + " " + streak);
+        killer.sendMessage(ChatColor.GREEN + "" + ChatColor.BOLD + "KILL!" + ChatColor.AQUA + " +12XP");
         killer.playSound(killer.getLocation(), Sound.ENTITY_EXPERIENCE_ORB_PICKUP, 2.0f, 2.0f);
         killer.playSound(killer.getLocation(), Sound.ENTITY_EXPERIENCE_ORB_PICKUP, 2.0f, 2.0f);
         Location loc = e.getEntity().getLocation();
