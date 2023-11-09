@@ -33,6 +33,12 @@ public class InstaBoom_TNT implements Listener {
                 List<Player> nearbyPlayers = (List<Player>) location.getWorld().getNearbyPlayers(location, 1);
                 for (Player playernear : nearbyPlayers) {
                     playernear.addPotionEffect(new PotionEffect(PotionEffectType.LEVITATION, 1, 20));
+                    if (item.getAmount() > 1) {
+                        item.setAmount(item.getAmount() - 1);
+                        player.getInventory().setItemInMainHand(item);
+                    } else {
+                        player.getInventory().setItemInMainHand(null);
+                    }
                 }
             }
         }
