@@ -12,6 +12,7 @@ import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
 import org.bukkit.potion.PotionEffect;
 import org.bukkit.potion.PotionEffectType;
+import org.bukkit.util.Vector;
 
 import java.util.List;
 
@@ -33,6 +34,12 @@ public class InstaBoom_TNT implements Listener {
                 List<Player> nearbyPlayers = (List<Player>) location.getWorld().getNearbyPlayers(location, 1);
                 for (Player playernear : nearbyPlayers) {
                     playernear.addPotionEffect(new PotionEffect(PotionEffectType.LEVITATION, 1, 20));
+
+                    Vector direction = playernear.getLocation().subtract(location).toVector();
+                    direction.normalize();
+                    // Push player away from the block
+                    playernear.teleport(playernear.getLocation().add(direction));
+
                     }
                 }
             if (item.getAmount() > 1) {
