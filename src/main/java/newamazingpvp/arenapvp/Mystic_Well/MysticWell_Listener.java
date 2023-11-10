@@ -28,7 +28,7 @@ public class MysticWell_Listener implements Listener {
             if (block.getType() == Material.ENCHANTING_TABLE) {
                 event.setCancelled(true);
                 player.playSound(player.getLocation(), Sound.ENTITY_ITEM_PICKUP, 2.0f, 0.0f);
-                Inventory well = Bukkit.createInventory(player, 45, "        " + ChatColor.RED + "" + ChatColor.BOLD + "" + ChatColor.MAGIC + "L" + ChatColor.LIGHT_PURPLE + "" + ChatColor.BOLD + " Mystic Well " + ChatColor.RED + "" + ChatColor.BOLD + "" + ChatColor.MAGIC + "L");
+                Inventory well = Bukkit.createInventory(player, 45, "         " + ChatColor.RED + "" + ChatColor.BOLD + "" + ChatColor.MAGIC + "L" + ChatColor.LIGHT_PURPLE + "" + ChatColor.BOLD + " Mystic Well " + ChatColor.RED + "" + ChatColor.BOLD + "" + ChatColor.MAGIC + "L");
 
                 ItemStack G1 = new ItemStack(Material.BLACK_STAINED_GLASS);
                 ItemMeta M1 = G1.getItemMeta();
