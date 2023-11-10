@@ -26,7 +26,7 @@ public class Mystic_Well implements Listener {
             Block block = event.getClickedBlock();
             if (block.getType() == Material.ENCHANTING_TABLE) {
                 event.setCancelled(true);
-                player.playSound(player.getLocation(), Sound.ENTITY_ITEM_PICKUP, 2.0f, 1.0f);
+                player.playSound(player.getLocation(), Sound.ENTITY_ITEM_PICKUP, 2.0f, 0.0f);
             }
         }
     }
@@ -43,6 +43,7 @@ public class Mystic_Well implements Listener {
             armorStand.setVisible(true);
             armorStand.setGravity(false);
             armorStand.setInvulnerable(true);
+            armorStand.setMarker(true);
 
             armorStandMap.put(event.getBlock().getLocation().hashCode(), armorStand);
         }
