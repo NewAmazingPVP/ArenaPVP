@@ -25,7 +25,7 @@ public class Mystic_Well implements Listener {
             if (block.getType() == Material.ENCHANTING_TABLE) {
                 event.setCancelled(true);
                 player.playSound(player.getLocation(), Sound.ENTITY_ITEM_PICKUP, 2.0f, 0.0f);
-                Inventory well = Bukkit.createInventory(player, 54, ChatColor.RED + "" + ChatColor.BOLD + "" + ChatColor.MAGIC + "L" + ChatColor.LIGHT_PURPLE + "" + ChatColor.BOLD + " Mystic Well " + ChatColor.RED + "" + ChatColor.BOLD + "" + ChatColor.MAGIC + "L");
+                Inventory well = Bukkit.createInventory(player, 54, "          " + ChatColor.RED + "" + ChatColor.BOLD + "" + ChatColor.MAGIC + "L" + ChatColor.LIGHT_PURPLE + "" + ChatColor.BOLD + " Mystic Well " + ChatColor.RED + "" + ChatColor.BOLD + "" + ChatColor.MAGIC + "L");
 
                 player.openInventory(well);
 
@@ -38,7 +38,7 @@ public class Mystic_Well implements Listener {
     @EventHandler
     public void onBlockPlace(BlockPlaceEvent event) {
         if (event.getBlock().getType() == Material.ENCHANTING_TABLE) {
-            Location location = event.getBlock().getLocation().add(0.5, 1.3, 0.5);
+            Location location = event.getBlock().getLocation().add(0.5, 1, 0.5);
             ArmorStand armorStand = event.getBlock().getWorld().spawn(location, ArmorStand.class);
             armorStand.setCustomName(ChatColor.LIGHT_PURPLE + "" + ChatColor.BOLD + "Mystic Well");
             armorStand.setCustomNameVisible(true);
