@@ -48,7 +48,7 @@ public class Mystic_Well implements Listener {
 
             Location location2 = event.getBlock().getLocation().add(0.5, 1.1, 0.5);
             ArmorStand armorStand2 = event.getBlock().getWorld().spawn(location2, ArmorStand.class);
-            armorStand2.setCustomName("Item Enchants");
+            armorStand2.setCustomName(ChatColor.GRAY + "Item Enchants");
             armorStand2.setCustomNameVisible(true);
             armorStand2.setVisible(false);
             armorStand2.setGravity(false);
@@ -62,8 +62,10 @@ public class Mystic_Well implements Listener {
     public void onBlockBreak(BlockBreakEvent event) {
         if (event.getBlock().getType() == Material.ENCHANTING_TABLE) {
             ArmorStand armorStand = armorStandMap.get(event.getBlock().getLocation().hashCode());
+            ArmorStand armorStand2 = armorStandMap.get(event.getBlock().getLocation().hashCode());
             if (armorStand != null) {
                 armorStand.remove();
+                armorStand2.remove();
                 armorStandMap.remove(event.getBlock().getLocation().hashCode());
             }
         }
