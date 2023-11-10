@@ -1,4 +1,4 @@
-package newamazingpvp.arenapvp.General_Listeners;
+package newamazingpvp.arenapvp.Mystic_Well;
 
 import org.bukkit.*;
 import org.bukkit.block.Block;
@@ -11,11 +11,14 @@ import org.bukkit.event.block.BlockBreakEvent;
 import org.bukkit.event.block.BlockPlaceEvent;
 import org.bukkit.event.player.PlayerInteractEvent;
 import org.bukkit.inventory.Inventory;
+import org.bukkit.inventory.ItemStack;
+import org.bukkit.inventory.meta.ItemMeta;
+import org.bukkit.scheduler.BukkitRunnable;
 
 import java.util.HashMap;
 import java.util.Map;
 
-public class Mystic_Well implements Listener {
+public class MysticWell_Listener implements Listener {
 
     @EventHandler
     public void onPlayerInteract(PlayerInteractEvent event) {
@@ -25,7 +28,20 @@ public class Mystic_Well implements Listener {
             if (block.getType() == Material.ENCHANTING_TABLE) {
                 event.setCancelled(true);
                 player.playSound(player.getLocation(), Sound.ENTITY_ITEM_PICKUP, 2.0f, 0.0f);
-                Inventory well = Bukkit.createInventory(player, 54, "          " + ChatColor.RED + "" + ChatColor.BOLD + "" + ChatColor.MAGIC + "L" + ChatColor.LIGHT_PURPLE + "" + ChatColor.BOLD + " Mystic Well " + ChatColor.RED + "" + ChatColor.BOLD + "" + ChatColor.MAGIC + "L");
+                Inventory well = Bukkit.createInventory(player, 45, "        " + ChatColor.RED + "" + ChatColor.BOLD + "" + ChatColor.MAGIC + "L" + ChatColor.LIGHT_PURPLE + "" + ChatColor.BOLD + " Mystic Well " + ChatColor.RED + "" + ChatColor.BOLD + "" + ChatColor.MAGIC + "L");
+
+                ItemStack G1 = new ItemStack(Material.BLACK_STAINED_GLASS);
+                ItemMeta M1 = G1.getItemMeta();
+                M1.setDisplayName(" ");
+                G1.setItemMeta(M1);
+
+                ItemStack G2 = new ItemStack(Material.PINK_STAINED_GLASS);
+                ItemMeta M2 = G2.getItemMeta();
+                M2.setDisplayName(" ");
+                G2.setItemMeta(M2);
+
+
+
 
                 player.openInventory(well);
 
@@ -73,3 +89,5 @@ public class Mystic_Well implements Listener {
         }
     }
 }
+
+
