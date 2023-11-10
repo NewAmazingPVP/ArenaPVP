@@ -6,6 +6,7 @@ import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.block.Action;
 import org.bukkit.event.block.BlockPlaceEvent;
+import org.bukkit.event.entity.EntityDamageEvent;
 import org.bukkit.event.entity.PlayerDeathEvent;
 import org.bukkit.event.player.PlayerInteractEvent;
 import org.bukkit.inventory.ItemStack;
@@ -31,10 +32,9 @@ public class InstaBoom_TNT implements Listener {
             e.setCancelled(true);
             for (Player onlineplayer : Bukkit.getOnlinePlayers()) {
                 onlineplayer.playSound(player.getLocation(), Sound.ENTITY_GENERIC_EXPLODE, 1.0f, 1.0f);
-                List<Player> nearbyPlayers = (List<Player>) location.getWorld().getNearbyPlayers(location, 20);
+                List<Player> nearbyPlayers = (List<Player>) location.getWorld().getNearbyPlayers(location, 2);
                 for (Player playernear : nearbyPlayers) {
                     playernear.addPotionEffect(new PotionEffect(PotionEffectType.LEVITATION, 1, 4));
-                    playernear.damage(3);
 
                     }
                 }
