@@ -1,5 +1,6 @@
 package newamazingpvp.arenapvp.General_Listeners;
 
+import org.bukkit.ChatColor;
 import org.bukkit.Location;
 import org.bukkit.Material;
 import org.bukkit.Sound;
@@ -37,7 +38,12 @@ public class Mystic_Well implements Listener {
         if (event.getBlock().getType() == Material.ENCHANTING_TABLE) {
             Location location = event.getBlock().getLocation().add(0, 1, 0);
             ArmorStand armorStand = event.getBlock().getWorld().spawn(location, ArmorStand.class);
+            armorStand.setCustomName(ChatColor.LIGHT_PURPLE + "" + ChatColor.BOLD + "Mystic Well");
+            armorStand.setCustomNameVisible(true);
             armorStand.setVisible(true);
+            armorStand.setGravity(false);
+            armorStand.setInvulnerable(true);
+
             armorStandMap.put(event.getBlock().getLocation().hashCode(), armorStand);
         }
     }
