@@ -31,14 +31,10 @@ public class InstaBoom_TNT implements Listener {
             e.setCancelled(true);
             for (Player onlineplayer : Bukkit.getOnlinePlayers()) {
                 onlineplayer.playSound(player.getLocation(), Sound.ENTITY_GENERIC_EXPLODE, 1.0f, 1.0f);
-                List<Player> nearbyPlayers = (List<Player>) location.getWorld().getNearbyPlayers(location, 1);
+                List<Player> nearbyPlayers = (List<Player>) location.getWorld().getNearbyPlayers(location, 20);
                 for (Player playernear : nearbyPlayers) {
-                    playernear.addPotionEffect(new PotionEffect(PotionEffectType.LEVITATION, 1, 20));
-
-                    Vector direction = playernear.getLocation().subtract(location).toVector();
-                    direction.normalize();
-                    // Push player away from the block
-                    playernear.teleport(playernear.getLocation().add(direction));
+                    playernear.addPotionEffect(new PotionEffect(PotionEffectType.LEVITATION, 1, 4));
+                    playernear.damage(3);
 
                     }
                 }
