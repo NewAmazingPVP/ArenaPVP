@@ -3,6 +3,7 @@ package newamazingpvp.arenapvp;
 import newamazingpvp.arenapvp.Custom_Item_Listeners.InstaBoom_TNT;
 import newamazingpvp.arenapvp.General_Listeners.Damage_Indicator;
 import newamazingpvp.arenapvp.General_Listeners.Death_Event;
+import newamazingpvp.arenapvp.General_Listeners.Player_Join;
 import newamazingpvp.arenapvp.Mystic_Well.MysticWell_Listener;
 import newamazingpvp.arenapvp.General_Listeners.PlayerCount;
 import newamazingpvp.arenapvp.Give_Item_Commands_ADMIN_ONLY.Give_InstaboomTNT;
@@ -34,13 +35,14 @@ public final class ArenaPVP extends JavaPlugin {
         startReleaseChecker();
 
 
-        //Initialize things ig
+        //Initialize Listeners
         getServer().getPluginManager().registerEvents(new Kill_Listener(), this);
         getServer().getPluginManager().registerEvents(new Death_Event(), this);
         getServer().getPluginManager().registerEvents(new PlayerCount(), this);
         getServer().getPluginManager().registerEvents(new InstaBoom_TNT(), this);
         getServer().getPluginManager().registerEvents(new MysticWell_Listener(), this);
         getServer().getPluginManager().registerEvents(new Damage_Indicator(), this);
+        getServer().getPluginManager().registerEvents(new Player_Join(), this);
 
 
         //commands
