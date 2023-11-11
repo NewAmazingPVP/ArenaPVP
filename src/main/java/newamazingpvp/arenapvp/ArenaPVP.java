@@ -1,7 +1,7 @@
 package newamazingpvp.arenapvp;
 
 import newamazingpvp.arenapvp.Custom_Item_Listeners.InstaBoom_TNT;
-import newamazingpvp.arenapvp.General_Listeners.Damage_ActionBar;
+import newamazingpvp.arenapvp.General_Listeners.Damage_Indicator;
 import newamazingpvp.arenapvp.General_Listeners.Death_Event;
 import newamazingpvp.arenapvp.Mystic_Well.MysticWell_Listener;
 import newamazingpvp.arenapvp.General_Listeners.PlayerCount;
@@ -35,7 +35,7 @@ public final class ArenaPVP extends JavaPlugin {
         getServer().getPluginManager().registerEvents(new PlayerCount(), this);
         getServer().getPluginManager().registerEvents(new InstaBoom_TNT(), this);
         getServer().getPluginManager().registerEvents(new MysticWell_Listener(), this);
-        getServer().getPluginManager().registerEvents(new Damage_ActionBar(), this);
+        getServer().getPluginManager().registerEvents(new Damage_Indicator(), this);
 
 
         //commands
