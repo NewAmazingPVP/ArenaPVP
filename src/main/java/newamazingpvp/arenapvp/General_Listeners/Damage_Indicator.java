@@ -20,9 +20,13 @@ public class Damage_Indicator implements Listener {
         if (damager instanceof Player) {
             Player player = (Player) damager;
             double health = ((Damageable) damageTaker).getHealth();
-            player.sendMessage(ChatColor.RED + "" + ChatColor.BOLD + health + ChatColor.RED + " ♥");
-            player.playSound(player.getLocation(), Sound.ENTITY_PLAYER_HURT, 1.0f, 1.0f);
-            player.sendActionBar(ChatColor.RED + "" + ChatColor.BOLD + health + ChatColor.RED + " ❤");
+            if (health <= 0) {
+                player.playSound(player.getLocation(), Sound.ENTITY_PLAYER_HURT, 1.0f, 1.0f);
+                player.sendActionBar(ChatColor.RED + "" + ChatColor.BOLD + health + ChatColor.RED + " ❤");
+            }
+            else {
+                player.sendActionBar(ChatColor.GREEN + "" + ChatColor.BOLD + "KILL!" + ChatColor.AQUA + " ⚔");
+            }
         }
     }
 }
