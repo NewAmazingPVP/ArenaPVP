@@ -8,6 +8,7 @@ import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.entity.EntityDamageByEntityEvent;
+import org.bukkit.event.entity.EntityDeathEvent;
 
 public class Damage_Indicator implements Listener {
 
@@ -23,10 +24,16 @@ public class Damage_Indicator implements Listener {
             if (health > 0) {
                 player.playSound(player.getLocation(), Sound.ENTITY_PLAYER_HURT, 1.0f, 1.0f);
                 player.sendActionBar(ChatColor.RED + "" + ChatColor.BOLD + health + ChatColor.RED + " ❤");
-            }
-            else {
-                player.sendActionBar(ChatColor.GREEN + "" + ChatColor.BOLD + "KILL!" + ChatColor.AQUA + " ⚔");
+                player.stopSound(Sound.valueOf("PLAYER_ATTACK_SWEEP"));
             }
         }
+    }
+
+    @EventHandler
+    public void onEntityDamageByEntity(EntityDeathEvent event) {
+
+        Player killer = event.getEntity().getKiller();
+        killer.sendActionBar(ChatColor.GREEN + "" + ChatColor.BOLD + "KILL!" + ChatColor.AQUA + " ⚔");
+
     }
 }
