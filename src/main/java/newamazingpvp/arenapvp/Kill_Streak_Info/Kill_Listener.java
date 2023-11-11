@@ -19,7 +19,6 @@ public class Kill_Listener implements Listener {
         Player killer = e.getEntity().getKiller();
         killer.sendMessage(ChatColor.GREEN + "" + ChatColor.BOLD + "KILL!" + ChatColor.AQUA + " +12XP ⚔");
         killer.playSound(killer.getLocation(), Sound.ENTITY_EXPERIENCE_ORB_PICKUP, 2.0f, 2.0f);
-        killer.playSound(killer.getLocation(), Sound.ENTITY_EXPERIENCE_ORB_PICKUP, 2.0f, 2.0f);
         Location loc = e.getEntity().getLocation();
         e.getEntity().getWorld().spawnParticle(Particle.SMOKE_NORMAL, loc, 10);
     }
