@@ -24,6 +24,7 @@ public class Damage_Indicator implements Listener {
             if (health > 0) {
                 player.playSound(player.getLocation(), Sound.ENTITY_PLAYER_HURT, 1.0f, 1.0f);
                 player.sendActionBar(ChatColor.RED + "" + ChatColor.BOLD + health + ChatColor.RED + " ❤");
+                player.stopSound(Sound.valueOf("PLAYER_ATTACK_SWEEP"));
             }
         }
     }
