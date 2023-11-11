@@ -14,7 +14,7 @@ public class PreMade_Armor {
 
     public static ItemStack startCP() {
 
-        ItemStack startCP = new ItemStack(Material.LEATHER_BOOTS);
+        ItemStack startCP = new ItemStack(Material.LEATHER_CHESTPLATE);
         LeatherArmorMeta startcpm = (LeatherArmorMeta) startCP.getItemMeta();
         startcpm.setDisplayName(ChatColor.WHITE + "" + ChatColor.BOLD + "Starter Chestplate");
         startcpm.setUnbreakable(true);
@@ -42,7 +42,7 @@ public class PreMade_Armor {
 
     public static ItemStack startBoot() {
 
-        ItemStack startBoots = new ItemStack(Material.LEATHER_LEGGINGS);
+        ItemStack startBoots = new ItemStack(Material.LEATHER_BOOTS);
         LeatherArmorMeta startbootm = (LeatherArmorMeta) startBoots.getItemMeta();
         startbootm.setDisplayName(ChatColor.WHITE + "" + ChatColor.BOLD + "Starter Boots");
         startbootm.setUnbreakable(true);
