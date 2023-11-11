@@ -21,7 +21,7 @@ public final class ArenaPVP extends JavaPlugin {
 
     public static ArenaPVP arenaPVP;
     public static FileConfiguration config;
-    private DataBaseHelper dataBaseHelper;
+    public static DataBaseHelper dataBaseHelper;
 
     @Override
     public void onEnable() {
