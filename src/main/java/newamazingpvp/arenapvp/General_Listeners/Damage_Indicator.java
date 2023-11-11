@@ -16,18 +16,12 @@ public class Damage_Indicator implements Listener {
         Entity damager = event.getDamager();
         Entity damageTaker = event.getEntity();
 
-        Player player = null;
-        double health = 0;
+
         if (damager instanceof Player) {
-            player = (Player) damager;
-            health = ((Damageable) damageTaker).getHealth();
+            Player player = (Player) damager;
+            double health = ((Damageable) damageTaker).getHealth();
+            player.sendMessage(ChatColor.RED + "" + ChatColor.BOLD + health + ChatColor.RED + " ♥");
             player.playSound(player.getLocation(), Sound.ENTITY_PLAYER_HURT, 1.0f, 1.0f);
-            if (health <= 0) {
-                player.sendActionBar(ChatColor.GREEN + "" + ChatColor.BOLD + "KILL!" + ChatColor.AQUA + " ⚔");
-
-
-            }
-        } else {
             player.sendActionBar(ChatColor.RED + "" + ChatColor.BOLD + health + ChatColor.RED + " ❤");
         }
     }
