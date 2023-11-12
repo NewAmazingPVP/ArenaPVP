@@ -8,7 +8,9 @@ import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.entity.PlayerDeathEvent;
 import org.bukkit.event.player.PlayerJoinEvent;
+import org.bukkit.inventory.ItemFlag;
 import org.bukkit.inventory.ItemStack;
+import org.bukkit.inventory.meta.ItemMeta;
 
 import static newamazingpvp.arenapvp.Pre_Made_Items.PreMadeItems_Custom.startIronSword;
 import static newamazingpvp.arenapvp.Pre_Made_Items.PreMade_Armor.*;
@@ -25,7 +27,12 @@ public class Player_Join implements Listener {
         ItemStack leggings = player.getInventory().getLeggings();
         ItemStack boots = player.getInventory().getBoots();
 
-        ItemStack ironSword = new ItemStack(Material.IRON_SWORD);
+        ItemStack startIronSword = new ItemStack(Material.IRON_SWORD);
+        ItemMeta SI = startIronSword.getItemMeta();
+        SI.setDisplayName(ChatColor.WHITE + "" + ChatColor.BOLD + "Iron Sword");
+        SI.setUnbreakable(true);
+        SI.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
+        startIronSword.setItemMeta(SI);
 
 
         if (chest == null || chest.getType() == Material.AIR) {
@@ -46,7 +53,7 @@ public class Player_Join implements Listener {
 
         }
 
-        if (player.getInventory().contains(ironSword)) {
+        if (player.getInventory().contains(startIronSword)) {
 
 
         } else {
