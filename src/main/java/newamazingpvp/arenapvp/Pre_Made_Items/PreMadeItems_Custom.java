@@ -48,14 +48,14 @@ public class PreMadeItems_Custom {
 
     public static ItemStack startBow() {
 
-        ItemStack startIronSword = new ItemStack(Material.IRON_SWORD);
-        ItemMeta SI = startIronSword.getItemMeta();
-        SI.setDisplayName(ChatColor.WHITE + "" + ChatColor.BOLD + "Iron Sword");
-        SI.setUnbreakable(true);
-        SI.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
-        startIronSword.setItemMeta(SI);
+        ItemStack startBow = new ItemStack(Material.BOW);
+        ItemMeta SIB = startBow.getItemMeta();
+        SIB.setDisplayName(ChatColor.WHITE + "" + ChatColor.BOLD + "Bow");
+        SIB.setUnbreakable(true);
+        SIB.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
+        startBow.setItemMeta(SIB);
 
-        return startIronSword;
+        return startBow;
 
     }
 }

@@ -12,6 +12,7 @@ import org.bukkit.inventory.ItemFlag;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
 
+import static newamazingpvp.arenapvp.Pre_Made_Items.PreMadeItems_Custom.startBow;
 import static newamazingpvp.arenapvp.Pre_Made_Items.PreMadeItems_Custom.startIronSword;
 import static newamazingpvp.arenapvp.Pre_Made_Items.PreMade_Armor.*;
 
@@ -27,6 +28,8 @@ public class Player_Join implements Listener {
         ItemStack leggings = player.getInventory().getLeggings();
         ItemStack boots = player.getInventory().getBoots();
 
+
+        //item stacks for some items
         ItemStack startIronSword = new ItemStack(Material.IRON_SWORD);
         ItemMeta SI = startIronSword.getItemMeta();
         SI.setDisplayName(ChatColor.WHITE + "" + ChatColor.BOLD + "Iron Sword");
@@ -34,7 +37,15 @@ public class Player_Join implements Listener {
         SI.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
         startIronSword.setItemMeta(SI);
 
+        ItemStack startBow = new ItemStack(Material.BOW);
+        ItemMeta SIB = startBow.getItemMeta();
+        SIB.setDisplayName(ChatColor.WHITE + "" + ChatColor.BOLD + "Bow");
+        SIB.setUnbreakable(true);
+        SIB.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
+        startBow.setItemMeta(SIB);
 
+
+        //test if they have items
         if (chest == null || chest.getType() == Material.AIR) {
 
             player.getInventory().setChestplate(startCP());
@@ -59,6 +70,14 @@ public class Player_Join implements Listener {
         } else {
 
             player.getInventory().addItem(startIronSword());
+
+        }
+
+        if (player.getInventory().contains(startBow)) {
+
+        }else{
+
+            player.getInventory().addItem(startBow());
 
         }
 
