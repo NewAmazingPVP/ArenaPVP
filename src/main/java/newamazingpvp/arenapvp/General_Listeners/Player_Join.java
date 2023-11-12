@@ -1,6 +1,8 @@
 package newamazingpvp.arenapvp.General_Listeners;
 
+import org.bukkit.ChatColor;
 import org.bukkit.Material;
+import org.bukkit.Sound;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
@@ -15,6 +17,7 @@ public class Player_Join implements Listener {
     @EventHandler
     public void onPlayerDeath(PlayerJoinEvent e) {
 
+        //armor check
         Player player = e.getPlayer();
         ItemStack helmet = player.getInventory().getHelmet();
         ItemStack chest = player.getInventory().getChestplate();
@@ -40,5 +43,10 @@ public class Player_Join implements Listener {
             player.getInventory().setBoots(startBoot());
 
         }
+
+        player.sendMessage(ChatColor.YELLOW + "" + ChatColor.BOLD + "Welcome!" + ChatColor.GREEN + " This game is in early development and will have a lot of bugs!");
+        player.playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 1.0f, 1.0f);
+        player.sendTitle(ChatColor.DARK_GREEN + "" + ChatColor.BOLD + "Welcome!", "", 0, 70, 20);
+
     }
 }
