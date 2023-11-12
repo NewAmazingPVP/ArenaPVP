@@ -13,6 +13,8 @@ import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
 
 import static newamazingpvp.arenapvp.ArenaPVP.arenaPVP;
+import static newamazingpvp.arenapvp.Pre_Made_Items.PreMadeItems_Custom.*;
+import static newamazingpvp.arenapvp.Pre_Made_Items.PreMade_Armor.startCP;
 
 
 public class Open_God_Menu implements CommandExecutor {
@@ -45,6 +47,34 @@ public class Open_God_Menu implements CommandExecutor {
         godMenu.setItem(8, G1);
         godMenu.setItem(9, G1);
 
+        godMenu.setItem(10, startCP());
+        godMenu.setItem(11, startBow());
+        godMenu.setItem(12, startIronSword());
+        godMenu.setItem(13, InstaBoomTNT());
+        /*Guide.setItem(14, warp);
+        Guide.setItem(15, dsword);
+        Guide.setItem(16, compact);
+        Guide.setItem(19, compact2);
+        Guide.setItem(20, bindingchest);
+        Guide.setItem(21, fearmongerperl);
+        Guide.setItem(22, OreMixture);
+        Guide.setItem(23, Mixedeye);
+        Guide.setItem(24, corruptedHandle);
+        Guide.setItem(25, infusedlapis);
+        Guide.setItem(28, GodPot);
+        Guide.setItem(29, LuvkyGem);
+        Guide.setItem(30, LowLevelLightSword);
+        Guide.setItem(31, WeakLevelLightSword);
+        Guide.setItem(32, StrongerLevelLightSword);
+        Guide.setItem(33, StrongLevelLightSword);
+        Guide.setItem(34, EliteLevelLightSword);
+        Guide.setItem(37, LapisArmor);
+        Guide.setItem(38, BottleOfLight);
+        Guide.setItem(39, ReaperSoul);
+        Guide.setItem(40, goldcoveredmeat);
+        Guide.setItem(41, Light);
+        Guide.setItem(42, StickOfPower);*/
+
 
 
 
@@ -72,11 +102,11 @@ public class Open_God_Menu implements CommandExecutor {
         player.openInventory(godMenu);
 
         player.playSound(player.getLocation(), Sound.BLOCK_NOTE_BLOCK_PLING, 1.0f, 2.0f);
-        Bukkit.getScheduler().runTaskLater(arenaPVP, () -> player.playSound(player.getLocation(), Sound.BLOCK_NOTE_BLOCK_PLING, 1.0f, 1.0f), 7);
-        Bukkit.getScheduler().runTaskLater(arenaPVP, () -> player.playSound(player.getLocation(), Sound.BLOCK_NOTE_BLOCK_PLING, 1.0f, 2.0f), 17);
-        Bukkit.getScheduler().runTaskLater(arenaPVP, () -> player.playSound(player.getLocation(), Sound.BLOCK_NOTE_BLOCK_PLING, 1.0f, 1.0f), 24);
-        Bukkit.getScheduler().runTaskLater(arenaPVP, () -> player.playSound(player.getLocation(), Sound.BLOCK_NOTE_BLOCK_PLING, 1.0f, 2.0f), 34);
-        Bukkit.getScheduler().runTaskLater(arenaPVP, () -> player.playSound(player.getLocation(), Sound.BLOCK_NOTE_BLOCK_PLING, 1.0f, 1.0f), 41);
+        Bukkit.getScheduler().runTaskLater(arenaPVP, () -> player.playSound(player.getLocation(), Sound.BLOCK_NOTE_BLOCK_PLING, 1.0f, 1.0f), 5);
+        Bukkit.getScheduler().runTaskLater(arenaPVP, () -> player.playSound(player.getLocation(), Sound.BLOCK_NOTE_BLOCK_PLING, 1.0f, 2.0f), 10);
+        Bukkit.getScheduler().runTaskLater(arenaPVP, () -> player.playSound(player.getLocation(), Sound.BLOCK_NOTE_BLOCK_PLING, 1.0f, 1.0f), 15);
+        Bukkit.getScheduler().runTaskLater(arenaPVP, () -> player.playSound(player.getLocation(), Sound.BLOCK_NOTE_BLOCK_PLING, 1.0f, 2.0f), 20);
+        Bukkit.getScheduler().runTaskLater(arenaPVP, () -> player.playSound(player.getLocation(), Sound.BLOCK_NOTE_BLOCK_PLING, 1.0f, 1.0f), 25);
         return true;
     }
 }
