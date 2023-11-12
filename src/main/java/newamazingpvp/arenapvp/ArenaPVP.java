@@ -4,6 +4,7 @@ import newamazingpvp.arenapvp.Custom_Item_Listeners.InstaBoom_TNT;
 import newamazingpvp.arenapvp.General_Listeners.Damage_Indicator;
 import newamazingpvp.arenapvp.General_Listeners.Death_Event;
 import newamazingpvp.arenapvp.General_Listeners.Player_Join;
+import newamazingpvp.arenapvp.Give_Item_Commands_ADMIN_ONLY.Open_God_Menu;
 import newamazingpvp.arenapvp.Mystic_Well.MysticWell_Listener;
 import newamazingpvp.arenapvp.General_Listeners.PlayerCount;
 import newamazingpvp.arenapvp.Give_Item_Commands_ADMIN_ONLY.Give_InstaboomTNT;
@@ -49,6 +50,7 @@ public final class ArenaPVP extends JavaPlugin {
 
         //commands
         getCommand("howmanyplayersareonline").setExecutor(new OnlinePlayers());
+        getCommand("open_god_menu").setExecutor(new Open_God_Menu());
         getCommand("give_InstaBoomTNT").setExecutor(new Give_InstaboomTNT());
 
         //database

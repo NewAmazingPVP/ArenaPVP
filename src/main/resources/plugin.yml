@@ -10,3 +10,6 @@ commands:
   give_InstaBoomTNT:
     description: Gives InstaBoomTNT
     usage: /give_instaboomtnt
+  open_god_menu:
+    description: Opens the god menu (ADMINS ONLY)
+    usage: /opengodmenu
