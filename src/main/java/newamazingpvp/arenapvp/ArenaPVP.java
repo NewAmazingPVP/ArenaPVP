@@ -6,7 +6,6 @@ import newamazingpvp.arenapvp.Give_Item_Commands_ADMIN_ONLY.Open_God_Menu;
 import newamazingpvp.arenapvp.Give_Item_Commands_ADMIN_ONLY.Open_God_Menu_Listener;
 import newamazingpvp.arenapvp.Give_Item_Commands_ADMIN_ONLY.Pit_Server_Restart;
 import newamazingpvp.arenapvp.Mystic_Well.MysticWell_Listener;
-import newamazingpvp.arenapvp.Give_Item_Commands_ADMIN_ONLY.Give_InstaboomTNT;
 import newamazingpvp.arenapvp.Kill_Streak_Info.Kill_Listener;
 import newamazingpvp.arenapvp.Upgrades_Menu.MainUpgradeMenu;
 import newamazingpvp.arenapvp.User_Commands.OnlinePlayers;
@@ -54,7 +53,6 @@ public final class ArenaPVP extends JavaPlugin {
         getCommand("howmanyplayersareonline").setExecutor(new OnlinePlayers());
         getCommand("open_god_menu").setExecutor(new Open_God_Menu());
         getCommand("pit_restart_server").setExecutor(new Pit_Server_Restart());
-        getCommand("give_InstaBoomTNT").setExecutor(new Give_InstaboomTNT());
 
         //database
         dataBaseHelper = new DataBaseHelper(getDataFolder().getAbsolutePath() + File.separator + "example.db");
