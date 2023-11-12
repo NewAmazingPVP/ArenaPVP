@@ -1,13 +1,10 @@
 package newamazingpvp.arenapvp;
 
 import newamazingpvp.arenapvp.Custom_Item_Listeners.InstaBoom_TNT;
-import newamazingpvp.arenapvp.General_Listeners.Damage_Indicator;
-import newamazingpvp.arenapvp.General_Listeners.Death_Event;
-import newamazingpvp.arenapvp.General_Listeners.Player_Join;
+import newamazingpvp.arenapvp.General_Listeners.*;
 import newamazingpvp.arenapvp.Give_Item_Commands_ADMIN_ONLY.Open_God_Menu;
 import newamazingpvp.arenapvp.Give_Item_Commands_ADMIN_ONLY.Open_God_Menu_Listener;
 import newamazingpvp.arenapvp.Mystic_Well.MysticWell_Listener;
-import newamazingpvp.arenapvp.General_Listeners.PlayerCount;
 import newamazingpvp.arenapvp.Give_Item_Commands_ADMIN_ONLY.Give_InstaboomTNT;
 import newamazingpvp.arenapvp.Kill_Streak_Info.Kill_Listener;
 import newamazingpvp.arenapvp.Upgrades_Menu.MainUpgradeMenu;
@@ -48,6 +45,8 @@ public final class ArenaPVP extends JavaPlugin {
         getServer().getPluginManager().registerEvents(new Player_Join(), this);
         getServer().getPluginManager().registerEvents(new MainUpgradeMenu(), this);
         getServer().getPluginManager().registerEvents(new Open_God_Menu_Listener(), this);
+        getServer().getPluginManager().registerEvents(new Prevrnt_Invintory_Slots(), this);
+
 
 
         //commands
