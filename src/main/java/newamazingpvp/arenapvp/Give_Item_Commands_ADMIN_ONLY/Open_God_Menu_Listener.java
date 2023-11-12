@@ -8,7 +8,8 @@ import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.inventory.InventoryClickEvent;
 
-import static newamazingpvp.arenapvp.Pre_Made_Items.PreMadeItems_Custom.InstaBoomTNT;
+import static newamazingpvp.arenapvp.Pre_Made_Items.PreMadeItems_Custom.*;
+import static newamazingpvp.arenapvp.Pre_Made_Items.PreMade_Armor.*;
 
 public class Open_God_Menu_Listener implements Listener {
 
@@ -27,6 +28,32 @@ public class Open_God_Menu_Listener implements Listener {
             if (event.getCurrentItem().getDisplayName().equalsIgnoreCase(ChatColor.RED + "" + ChatColor.BOLD + "InstaBoom TNT") && event.getCurrentItem().getType() == Material.TNT) {
 
                 player.getInventory().addItem(InstaBoomTNT());
+                player.playSound(player.getLocation(), Sound.BLOCK_NOTE_BLOCK_PLING, 1.0f, 2.0f);
+                event.setCancelled(true);
+
+            }
+
+            if (event.getCurrentItem().getDisplayName().equalsIgnoreCase(ChatColor.WHITE + "" + ChatColor.BOLD + "Starter Chestplate") && event.getCurrentItem().getType() == Material.LEATHER_CHESTPLATE) {
+
+                player.getInventory().addItem(startCP());
+                player.getInventory().addItem(startLeg());
+                player.getInventory().addItem(startBoot());
+                player.playSound(player.getLocation(), Sound.BLOCK_NOTE_BLOCK_PLING, 1.0f, 2.0f);
+                event.setCancelled(true);
+
+            }
+
+            if (event.getCurrentItem().getDisplayName().equalsIgnoreCase(ChatColor.WHITE + "" + ChatColor.BOLD + "Iron Sword") && event.getCurrentItem().getType() == Material.IRON_SWORD) {
+
+                player.getInventory().addItem(startIronSword());
+                player.playSound(player.getLocation(), Sound.BLOCK_NOTE_BLOCK_PLING, 1.0f, 2.0f);
+                event.setCancelled(true);
+
+            }
+
+            if (event.getCurrentItem().getDisplayName().equalsIgnoreCase(ChatColor.WHITE + "" + ChatColor.BOLD + "Bow") && event.getCurrentItem().getType() == Material.BOW) {
+
+                player.getInventory().addItem(startBow());
                 player.playSound(player.getLocation(), Sound.BLOCK_NOTE_BLOCK_PLING, 1.0f, 2.0f);
                 event.setCancelled(true);
 

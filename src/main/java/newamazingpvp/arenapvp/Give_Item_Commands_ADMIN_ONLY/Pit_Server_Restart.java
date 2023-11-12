@@ -37,6 +37,7 @@ public class Pit_Server_Restart implements CommandExecutor {
             Bukkit.getScheduler().runTaskLater(arenaPVP, () -> player.playSound(player.getLocation(), Sound.BLOCK_NOTE_BLOCK_PLING, 1.0f, 2.0f), 8);
             Bukkit.getScheduler().runTaskLater(arenaPVP, () -> player.playSound(player.getLocation(), Sound.BLOCK_NOTE_BLOCK_PLING, 1.0f, 1.0f), 10);
 
+            Bukkit.getScheduler().runTaskLater(arenaPVP, () -> player.playSound(player.getLocation(), Sound.BLOCK_NOTE_BLOCK_PLING, 1.0f, 2.0f), 600);
             Bukkit.getScheduler().runTaskLater(arenaPVP, () -> player.sendMessage(ChatColor.RED + "" + ChatColor.BOLD + "WARNING" + ChatColor.YELLOW + " This server instance will be restarting in 30sec!"), 600);
 
             Bukkit.getScheduler().runTaskLater(arenaPVP, () -> player.playSound(player.getLocation(), Sound.BLOCK_NOTE_BLOCK_PLING, 1.0f, 2.0f), 1000);
@@ -50,6 +51,7 @@ public class Pit_Server_Restart implements CommandExecutor {
             Bukkit.getScheduler().runTaskLater(arenaPVP, () -> player.sendMessage(ChatColor.RED + "" + ChatColor.BOLD + "WARNING" + ChatColor.YELLOW + " This server instance will be restarting in 3!"), 1140);
             Bukkit.getScheduler().runTaskLater(arenaPVP, () -> player.sendMessage(ChatColor.RED + "" + ChatColor.BOLD + "WARNING" + ChatColor.YELLOW + " This server instance will be restarting in 2!"), 1160);
             Bukkit.getScheduler().runTaskLater(arenaPVP, () -> player.sendMessage(ChatColor.RED + "" + ChatColor.BOLD + "WARNING" + ChatColor.YELLOW + " This server instance will be restarting in 1!"), 1180);
+
         }
 
         Bukkit.getScheduler().runTaskLater(arenaPVP, () -> Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "restart"), 1200);
