@@ -8,6 +8,7 @@ import newamazingpvp.arenapvp.Mystic_Well.MysticWell_Listener;
 import newamazingpvp.arenapvp.General_Listeners.PlayerCount;
 import newamazingpvp.arenapvp.Give_Item_Commands_ADMIN_ONLY.Give_InstaboomTNT;
 import newamazingpvp.arenapvp.Kill_Streak_Info.Kill_Listener;
+import newamazingpvp.arenapvp.Upgrades_Menu.MainUpgradeMenu;
 import newamazingpvp.arenapvp.User_Commands.OnlinePlayers;
 import newamazingpvp.arenapvp.utility.DataBaseHelper;
 import org.bukkit.configuration.file.FileConfiguration;
@@ -43,6 +44,7 @@ public final class ArenaPVP extends JavaPlugin {
         getServer().getPluginManager().registerEvents(new MysticWell_Listener(), this);
         getServer().getPluginManager().registerEvents(new Damage_Indicator(), this);
         getServer().getPluginManager().registerEvents(new Player_Join(), this);
+        getServer().getPluginManager().registerEvents(new MainUpgradeMenu(), this);
 
 
         //commands
