@@ -32,4 +32,18 @@ public class PreMadeItems_Custom {
 
         return InstaBoomTNT;
     }
+
+    public static ItemStack startIronSword() {
+
+        ItemStack startIronSword = new ItemStack(Material.IRON_SWORD);
+        ItemMeta SI = startIronSword.getItemMeta();
+        SI.setDisplayName(ChatColor.WHITE + "" + ChatColor.BOLD + "Iron Sword");
+        SI.setUnbreakable(true);
+        SI.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
+        startIronSword.setItemMeta(SI);
+
+        return startIronSword;
+
+    }
 }
+
