@@ -35,6 +35,11 @@ public class Open_God_Menu implements CommandExecutor {
         M1.setDisplayName(" ");
         G1.setItemMeta(M1);
 
+        ItemStack G2 = new ItemStack(Material.ENCHANTED_BOOK);
+        ItemMeta M2 = G2.getItemMeta();
+        M2.setDisplayName(ChatColor.LIGHT_PURPLE + "" + ChatColor.BOLD +"Mystics Enchants");
+        G2.setItemMeta(M2);
+
 
         godMenu.setItem(0, G1);
         godMenu.setItem(1, G1);
@@ -93,7 +98,7 @@ public class Open_God_Menu implements CommandExecutor {
         godMenu.setItem(49, G1);
         godMenu.setItem(50, G1);
         godMenu.setItem(51, G1);
-        godMenu.setItem(52, G1);
+        godMenu.setItem(52, G2);
         godMenu.setItem(53, G1);
 
 
