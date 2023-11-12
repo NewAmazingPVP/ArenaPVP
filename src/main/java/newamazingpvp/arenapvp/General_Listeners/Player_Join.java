@@ -8,7 +8,7 @@ import org.bukkit.event.entity.PlayerDeathEvent;
 import org.bukkit.event.player.PlayerJoinEvent;
 import org.bukkit.inventory.ItemStack;
 
-import static newamazingpvp.arenapvp.Pre_Made_Items.PreMade_Armor.startCP;
+import static newamazingpvp.arenapvp.Pre_Made_Items.PreMade_Armor.*;
 
 public class Player_Join implements Listener {
 
@@ -23,9 +23,21 @@ public class Player_Join implements Listener {
 
 
 
+        if (chest == null || chest.getType() == Material.AIR) {
+
+            player.getInventory().setChestplate(startCP());
+
+        }
+
         if (leggings == null || leggings.getType() == Material.AIR) {
 
-            player.getInventory().setLeggings(startCP());
+            player.getInventory().setLeggings(startLeg());
+
+        }
+
+        if (boots == null || boots.getType() == Material.AIR) {
+
+            player.getInventory().setBoots(startBoot());
 
         }
     }
