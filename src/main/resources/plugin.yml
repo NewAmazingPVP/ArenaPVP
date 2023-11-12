@@ -10,6 +10,13 @@ commands:
   give_InstaBoomTNT:
     description: Gives InstaBoomTNT
     usage: /give_instaboomtnt
+
   open_god_menu:
     description: Opens the god menu (ADMINS ONLY)
     usage: /opengodmenu
+
+  pit_restart_server:
+    description: Restarts server (ADMINS ONLY)
+    usage: /pit_restart_server
+
+
