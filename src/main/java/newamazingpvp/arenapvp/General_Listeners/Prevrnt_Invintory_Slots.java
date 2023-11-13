@@ -8,6 +8,8 @@ import org.bukkit.inventory.EquipmentSlot;
 
 public class Prevrnt_Invintory_Slots implements Listener {
 
+
+    //this does not work needs fixing
     @EventHandler
     public void onPlayerInteract(PlayerInteractEvent event) {
 
