@@ -48,5 +48,3 @@ public class Mystic_Box implements Listener {
     }
 }
 
-    }
-}
