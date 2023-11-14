@@ -58,5 +58,21 @@ public class PreMadeItems_Custom {
         return startBow;
 
     }
+
+    public static ItemStack MysticBox() {
+
+        ItemStack MysticBox = new ItemStack(Material.ENDER_CHEST);
+        ItemMeta SI = MysticBox.getItemMeta();
+        SI.addEnchant(Enchantment.DURABILITY, 1, false);
+        SI.addItemFlags(ItemFlag.HIDE_ENCHANTS);
+        SI.setDisplayName(ChatColor.LIGHT_PURPLE + "" + ChatColor.BOLD + "" + ChatColor.MAGIC + "L" + ChatColor.GOLD + "" + ChatColor.BOLD + " Mystic Well " + ChatColor.LIGHT_PURPLE + "" + ChatColor.BOLD + "" + ChatColor.MAGIC + "L");
+        SI.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
+        List<String> BL = new ArrayList<>();
+        BL.add(ChatColor.DARK_PURPLE + "" + ChatColor.BOLD + "Place to open!");
+        SI.setLore(BL);
+        MysticBox.setItemMeta(SI);
+
+        return MysticBox;
+    }
 }
 

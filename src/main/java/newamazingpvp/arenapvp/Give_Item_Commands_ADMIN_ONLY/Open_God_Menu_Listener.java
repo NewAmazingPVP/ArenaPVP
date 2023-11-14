@@ -59,6 +59,14 @@ public class Open_God_Menu_Listener implements Listener {
 
             }
 
+            if (event.getCurrentItem().getDisplayName().equalsIgnoreCase(ChatColor.LIGHT_PURPLE + "" + ChatColor.BOLD + "" + ChatColor.MAGIC + "L" + ChatColor.GOLD + "" + ChatColor.BOLD + " Mystic Well " + ChatColor.LIGHT_PURPLE + "" + ChatColor.BOLD + "" + ChatColor.MAGIC + "L") && event.getCurrentItem().getType() == Material.ENDER_CHEST) {
+
+                player.getInventory().addItem(MysticBox());
+                player.playSound(player.getLocation(), Sound.BLOCK_NOTE_BLOCK_PLING, 1.0f, 2.0f);
+                event.setCancelled(true);
+
+            }
+
 
             event.setCancelled(true);
         }
