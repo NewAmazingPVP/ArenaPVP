@@ -29,35 +29,34 @@ public class Mystic_Box implements Listener {
 
         player.sendMessage(ChatColor.LIGHT_PURPLE + "" + ChatColor.BOLD + "Opening...");
         player.playEffect(EntityEffect.TOTEM_RESURRECT);
-        
+
+
 
         if (meta != null && meta.hasDisplayName() && meta.getDisplayName().equals(ChatColor.LIGHT_PURPLE + "" + ChatColor.BOLD + "" + ChatColor.MAGIC + "L" + ChatColor.GOLD + "" + ChatColor.BOLD + " Mystic Box " + ChatColor.LIGHT_PURPLE + "" + ChatColor.BOLD + "" + ChatColor.MAGIC + "L")) {
             location.getWorld().spawnParticle(Particle.EXPLOSION_HUGE, location, 20);
             e.setCancelled(true);
             for (Player onlineplayer : Bukkit.getOnlinePlayers()) {
-                List<Player> nearbyPlayers = (List<Player>) location.getWorld().getNearbyPlayers(location, 10);
+                List<Player> nearbyPlayers = (List<Player>) location.getWorld().getNearbyPlayers(location, 1);
                 for (Player playernear : nearbyPlayers) {
 
                     Bukkit.getScheduler().runTaskLater(arenaPVP, () -> player.playSound(player.getLocation(), Sound.ENTITY_GENERIC_EXPLODE, 10.0f, 0.0f), 0);
                     Bukkit.getScheduler().runTaskLater(arenaPVP, () -> player.playSound(player.getLocation(), Sound.ENTITY_ZOMBIE_BREAK_WOODEN_DOOR, 10.0f, 1.0f), 0);
                     Bukkit.getScheduler().runTaskLater(arenaPVP, () -> player.playSound(player.getLocation(), Sound.BLOCK_ENCHANTMENT_TABLE_USE, 10.0f, 1.0f), 0);
 
-                    Bukkit.getScheduler().runTaskLater(arenaPVP, () -> player.playSound(player.getLocation(), Sound.ENTITY_ITEM_PICKUP, 10.0f, 0.0f), 1);
+                    /*Bukkit.getScheduler().runTaskLater(arenaPVP, () -> player.playSound(player.getLocation(), Sound.ENTITY_ITEM_PICKUP, 10.0f, 0.0f), 1);
                     Bukkit.getScheduler().runTaskLater(arenaPVP, () -> player.playSound(player.getLocation(), Sound.ENTITY_ITEM_PICKUP, 10.0f, 0.0f), 2);
                     Bukkit.getScheduler().runTaskLater(arenaPVP, () -> player.playSound(player.getLocation(), Sound.ENTITY_ITEM_PICKUP, 10.0f, 0.1f), 3);
                     Bukkit.getScheduler().runTaskLater(arenaPVP, () -> player.playSound(player.getLocation(), Sound.ENTITY_ITEM_PICKUP, 10.0f, 0.0f), 4);
-
 
                     Bukkit.getScheduler().runTaskLater(arenaPVP, () -> player.playSound(player.getLocation(), Sound.ENTITY_ITEM_PICKUP, 10.0f, 1.0f), 5);
                     Bukkit.getScheduler().runTaskLater(arenaPVP, () -> player.playSound(player.getLocation(), Sound.ENTITY_ITEM_PICKUP, 10.0f, 1.0f), 6);
                     Bukkit.getScheduler().runTaskLater(arenaPVP, () -> player.playSound(player.getLocation(), Sound.ENTITY_ITEM_PICKUP, 10.0f, 2.0f), 7);
                     Bukkit.getScheduler().runTaskLater(arenaPVP, () -> player.playSound(player.getLocation(), Sound.ENTITY_ITEM_PICKUP, 10.0f, 1.0f), 8);
 
-
                     Bukkit.getScheduler().runTaskLater(arenaPVP, () -> player.playSound(player.getLocation(), Sound.ENTITY_ITEM_PICKUP, 10.0f, 2.0f), 9);
                     Bukkit.getScheduler().runTaskLater(arenaPVP, () -> player.playSound(player.getLocation(), Sound.ENTITY_ITEM_PICKUP, 10.0f, 2.0f), 10);
                     Bukkit.getScheduler().runTaskLater(arenaPVP, () -> player.playSound(player.getLocation(), Sound.ENTITY_ITEM_PICKUP, 10.0f, 2.0f), 11);
-                    Bukkit.getScheduler().runTaskLater(arenaPVP, () -> player.playSound(player.getLocation(), Sound.ENTITY_ITEM_PICKUP, 10.0f, 2.0f), 3);
+                    Bukkit.getScheduler().runTaskLater(arenaPVP, () -> player.playSound(player.getLocation(), Sound.ENTITY_ITEM_PICKUP, 10.0f, 2.0f), 3);*/
 
                 }
             }
