@@ -13,6 +13,8 @@ import org.bukkit.potion.PotionEffectType;
 
 import java.util.List;
 
+import static newamazingpvp.arenapvp.ArenaPVP.arenaPVP;
+
 public class Mystic_Box implements Listener {
 
     @EventHandler
@@ -27,14 +29,26 @@ public class Mystic_Box implements Listener {
 
 
 
-        if (meta != null && meta.hasDisplayName() && meta.getDisplayName().equals(ChatColor.RED + "" + ChatColor.BOLD + "InstaBoom TNT")) {
-            location.getWorld().spawnParticle(Particle.EXPLOSION_LARGE, location, 10);
+        if (meta != null && meta.hasDisplayName() && meta.getDisplayName().equals(ChatColor.LIGHT_PURPLE + "" + ChatColor.BOLD + "" + ChatColor.MAGIC + "L" + ChatColor.GOLD + "" + ChatColor.BOLD + " Mystic Box " + ChatColor.LIGHT_PURPLE + "" + ChatColor.BOLD + "" + ChatColor.MAGIC + "L")) {
+            location.getWorld().spawnParticle(Particle.EXPLOSION_HUGE, location, 20);
             e.setCancelled(true);
+
+
+
             for (Player onlineplayer : Bukkit.getOnlinePlayers()) {
-                onlineplayer.playSound(player.getLocation(), Sound.ENTITY_GENERIC_EXPLODE, 1.0f, 1.0f);
-                List<Player> nearbyPlayers = (List<Player>) location.getWorld().getNearbyPlayers(location, 2);
+
+
+                List<Player> nearbyPlayers = (List<Player>) location.getWorld().getNearbyPlayers(location, 10);
                 for (Player playernear : nearbyPlayers) {
-                    playernear.addPotionEffect(new PotionEffect(PotionEffectType.LEVITATION, 1, 4));
+
+                    Bukkit.getScheduler().runTaskLater(arenaPVP, () -> player.playSound(player.getLocation(), Sound.BLOCK_NOTE_BLOCK_PLING, 10.0f, 0.0f), 1);
+                    Bukkit.getScheduler().runTaskLater(arenaPVP, () -> player.playSound(player.getLocation(), Sound.BLOCK_NOTE_BLOCK_PLING, 10.0f, 0.0f), 1);
+
+                    Bukkit.getScheduler().runTaskLater(arenaPVP, () -> player.playSound(player.getLocation(), Sound.BLOCK_NOTE_BLOCK_PLING, 10.0f, 1.0f), 10);
+                    Bukkit.getScheduler().runTaskLater(arenaPVP, () -> player.playSound(player.getLocation(), Sound.BLOCK_NOTE_BLOCK_PLING, 10.0f, 1.0f), 10);
+
+                    Bukkit.getScheduler().runTaskLater(arenaPVP, () -> player.playSound(player.getLocation(), Sound.BLOCK_NOTE_BLOCK_PLING, 10.0f, 2.0f), 20);
+                    Bukkit.getScheduler().runTaskLater(arenaPVP, () -> player.playSound(player.getLocation(), Sound.BLOCK_NOTE_BLOCK_PLING, 10.0f, 2.0f), 20);
 
                 }
             }
