@@ -27,7 +27,7 @@ public class Mystic_Box implements Listener {
         Player player = e.getPlayer();
         ItemMeta meta = item.getItemMeta();
 
-
+        player.sendMessage(ChatColor.LIGHT_PURPLE + "" + ChatColor.BOLD + "Opening...");
 
         if (meta != null && meta.hasDisplayName() && meta.getDisplayName().equals(ChatColor.LIGHT_PURPLE + "" + ChatColor.BOLD + "" + ChatColor.MAGIC + "L" + ChatColor.GOLD + "" + ChatColor.BOLD + " Mystic Box " + ChatColor.LIGHT_PURPLE + "" + ChatColor.BOLD + "" + ChatColor.MAGIC + "L")) {
             location.getWorld().spawnParticle(Particle.EXPLOSION_HUGE, location, 20);
@@ -41,14 +41,14 @@ public class Mystic_Box implements Listener {
                 List<Player> nearbyPlayers = (List<Player>) location.getWorld().getNearbyPlayers(location, 10);
                 for (Player playernear : nearbyPlayers) {
 
-                    Bukkit.getScheduler().runTaskLater(arenaPVP, () -> player.playSound(player.getLocation(), Sound.BLOCK_NOTE_BLOCK_PLING, 10.0f, 0.0f), 1);
-                    Bukkit.getScheduler().runTaskLater(arenaPVP, () -> player.playSound(player.getLocation(), Sound.BLOCK_NOTE_BLOCK_PLING, 10.0f, 0.0f), 1);
+                    Bukkit.getScheduler().runTaskLater(arenaPVP, () -> player.playSound(player.getLocation(), Sound.ENTITY_ITEM_PICKUP, 10.0f, 0.0f), 1);
+                    Bukkit.getScheduler().runTaskLater(arenaPVP, () -> player.playSound(player.getLocation(), Sound.ENTITY_ITEM_PICKUP, 10.0f, 0.0f), 4);
 
-                    Bukkit.getScheduler().runTaskLater(arenaPVP, () -> player.playSound(player.getLocation(), Sound.BLOCK_NOTE_BLOCK_PLING, 10.0f, 1.0f), 10);
-                    Bukkit.getScheduler().runTaskLater(arenaPVP, () -> player.playSound(player.getLocation(), Sound.BLOCK_NOTE_BLOCK_PLING, 10.0f, 1.0f), 10);
+                    Bukkit.getScheduler().runTaskLater(arenaPVP, () -> player.playSound(player.getLocation(), Sound.ENTITY_ITEM_PICKUP, 10.0f, 1.0f), 10);
+                    Bukkit.getScheduler().runTaskLater(arenaPVP, () -> player.playSound(player.getLocation(), Sound.ENTITY_ITEM_PICKUP, 10.0f, 1.0f), 14);
 
-                    Bukkit.getScheduler().runTaskLater(arenaPVP, () -> player.playSound(player.getLocation(), Sound.BLOCK_NOTE_BLOCK_PLING, 10.0f, 2.0f), 20);
-                    Bukkit.getScheduler().runTaskLater(arenaPVP, () -> player.playSound(player.getLocation(), Sound.BLOCK_NOTE_BLOCK_PLING, 10.0f, 2.0f), 20);
+                    Bukkit.getScheduler().runTaskLater(arenaPVP, () -> player.playSound(player.getLocation(), Sound.ENTITY_ITEM_PICKUP, 10.0f, 2.0f), 20);
+                    Bukkit.getScheduler().runTaskLater(arenaPVP, () -> player.playSound(player.getLocation(), Sound.ENTITY_ITEM_PICKUP, 10.0f, 2.0f), 24);
 
                 }
             }
