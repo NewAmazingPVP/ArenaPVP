@@ -46,6 +46,8 @@ public final class ArenaPVP extends JavaPlugin {
         getServer().getPluginManager().registerEvents(new MainUpgradeMenu(), this);
         getServer().getPluginManager().registerEvents(new Open_God_Menu_Listener(), this);
         //getServer().getPluginManager().registerEvents(new Prevrnt_Invintory_Slots(), this);
+        getServer().getPluginManager().registerEvents(new Mystic_Box(), this);
+
 
 
 
