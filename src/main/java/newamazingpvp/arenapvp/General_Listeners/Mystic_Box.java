@@ -43,15 +43,20 @@ public class Mystic_Box implements Listener {
 
                     Bukkit.getScheduler().runTaskLater(arenaPVP, () -> player.playSound(player.getLocation(), Sound.ENTITY_ITEM_PICKUP, 10.0f, 0.0f), 1);
                     Bukkit.getScheduler().runTaskLater(arenaPVP, () -> player.playSound(player.getLocation(), Sound.ENTITY_ITEM_PICKUP, 10.0f, 0.0f), 2);
-                    Bukkit.getScheduler().runTaskLater(arenaPVP, () -> player.playSound(player.getLocation(), Sound.ENTITY_ITEM_PICKUP, 10.0f, 0.0f), 3);
+                    Bukkit.getScheduler().runTaskLater(arenaPVP, () -> player.playSound(player.getLocation(), Sound.ENTITY_ITEM_PICKUP, 10.0f, 0.1f), 3);
+                    Bukkit.getScheduler().runTaskLater(arenaPVP, () -> player.playSound(player.getLocation(), Sound.ENTITY_ITEM_PICKUP, 10.0f, 0.0f), 4);
+
 
                     Bukkit.getScheduler().runTaskLater(arenaPVP, () -> player.playSound(player.getLocation(), Sound.ENTITY_ITEM_PICKUP, 10.0f, 1.0f), 5);
                     Bukkit.getScheduler().runTaskLater(arenaPVP, () -> player.playSound(player.getLocation(), Sound.ENTITY_ITEM_PICKUP, 10.0f, 1.0f), 6);
-                    Bukkit.getScheduler().runTaskLater(arenaPVP, () -> player.playSound(player.getLocation(), Sound.ENTITY_ITEM_PICKUP, 10.0f, 1.0f), 7);
+                    Bukkit.getScheduler().runTaskLater(arenaPVP, () -> player.playSound(player.getLocation(), Sound.ENTITY_ITEM_PICKUP, 10.0f, 2.0f), 7);
+                    Bukkit.getScheduler().runTaskLater(arenaPVP, () -> player.playSound(player.getLocation(), Sound.ENTITY_ITEM_PICKUP, 10.0f, 1.0f), 8);
+
 
                     Bukkit.getScheduler().runTaskLater(arenaPVP, () -> player.playSound(player.getLocation(), Sound.ENTITY_ITEM_PICKUP, 10.0f, 2.0f), 9);
                     Bukkit.getScheduler().runTaskLater(arenaPVP, () -> player.playSound(player.getLocation(), Sound.ENTITY_ITEM_PICKUP, 10.0f, 2.0f), 10);
                     Bukkit.getScheduler().runTaskLater(arenaPVP, () -> player.playSound(player.getLocation(), Sound.ENTITY_ITEM_PICKUP, 10.0f, 2.0f), 11);
+                    Bukkit.getScheduler().runTaskLater(arenaPVP, () -> player.playSound(player.getLocation(), Sound.ENTITY_ITEM_PICKUP, 10.0f, 2.0f), 3);
 
                 }
             }
