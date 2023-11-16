@@ -27,14 +27,14 @@ public class Mystic_Box implements Listener {
         Player player = e.getPlayer();
         ItemMeta meta = item.getItemMeta();
 
-        player.sendMessage(ChatColor.LIGHT_PURPLE + "" + ChatColor.BOLD + "Opening...");
-        player.playEffect(EntityEffect.TOTEM_RESURRECT);
 
 
 
         if (meta != null && meta.hasDisplayName() && meta.getDisplayName().equals(ChatColor.LIGHT_PURPLE + "" + ChatColor.BOLD + "" + ChatColor.MAGIC + "L" + ChatColor.GOLD + "" + ChatColor.BOLD + " Mystic Box " + ChatColor.LIGHT_PURPLE + "" + ChatColor.BOLD + "" + ChatColor.MAGIC + "L")) {
             location.getWorld().spawnParticle(Particle.EXPLOSION_HUGE, location, 1);
             e.setCancelled(true);
+            player.sendMessage(ChatColor.LIGHT_PURPLE + "" + ChatColor.BOLD + "Opening...");
+            player.playEffect(EntityEffect.TOTEM_RESURRECT);
             for (Player onlineplayer : Bukkit.getOnlinePlayers()) {
                 List<Player> nearbyPlayers = (List<Player>) location.getWorld().getNearbyPlayers(location, 15);
                 for (Player playernear : nearbyPlayers) {

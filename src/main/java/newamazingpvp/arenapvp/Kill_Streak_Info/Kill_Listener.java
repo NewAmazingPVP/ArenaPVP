@@ -26,9 +26,7 @@ public class Kill_Listener implements Listener {
             killer.playSound(killer.getLocation(), Sound.ENTITY_EXPERIENCE_ORB_PICKUP, 2.0f, 2.0f);
 
 
-        }
-
-        else if (Math.random() < 0.5) {
+        } else if (Math.random() < 0.5) {
 
             killer.playSound(killer.getLocation(), Sound.ENTITY_EXPERIENCE_ORB_PICKUP, 2.0f, 2.0f);
             killer.sendMessage(ChatColor.GREEN + "" + ChatColor.BOLD + "KILL!" + ChatColor.AQUA + " +12XP ⚔");
@@ -40,15 +38,13 @@ public class Kill_Listener implements Listener {
             Bukkit.getScheduler().runTaskLater(arenaPVP, () -> killer.playSound(killer.getLocation(), Sound.BLOCK_NOTE_BLOCK_BELL, 1.0f, 3.0f), 5);
         }
     }
-
-
-
-
-
-
-
-
-
-
-    }
 }
+
+
+
+
+
+
+
+
+
