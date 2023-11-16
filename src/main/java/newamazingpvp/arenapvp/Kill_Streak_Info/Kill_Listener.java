@@ -34,8 +34,8 @@ public class Kill_Listener implements Listener {
             e.getEntity().getWorld().spawnParticle(Particle.WATER_WAKE, loc, 5);
             killer.getInventory().addItem(MysticBox());
             Bukkit.getScheduler().runTaskLater(arenaPVP, () -> killer.playSound(killer.getLocation(), Sound.BLOCK_NOTE_BLOCK_BELL, 1.0f, 0.0f), 1);
-            Bukkit.getScheduler().runTaskLater(arenaPVP, () -> killer.playSound(killer.getLocation(), Sound.BLOCK_NOTE_BLOCK_BELL, 1.0f, 1.0f), 3);
-            Bukkit.getScheduler().runTaskLater(arenaPVP, () -> killer.playSound(killer.getLocation(), Sound.BLOCK_NOTE_BLOCK_BELL, 1.0f, 3.0f), 5);
+            Bukkit.getScheduler().runTaskLater(arenaPVP, () -> killer.playSound(killer.getLocation(), Sound.BLOCK_NOTE_BLOCK_BELL, 1.0f, 1.0f), 11);
+            Bukkit.getScheduler().runTaskLater(arenaPVP, () -> killer.playSound(killer.getLocation(), Sound.BLOCK_NOTE_BLOCK_BELL, 1.0f, 3.0f), 21);
         }
     }
 }
