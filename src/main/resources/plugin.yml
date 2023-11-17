@@ -19,4 +19,8 @@ commands:
     description: Restarts server (ADMINS ONLY)
     usage: /pit_restart_server
 
+  quick_pit_restart_server:
+    description: Quick way to rs server (ADMINS ONLY)
+    usage: /quick_pit_restart_server
+
 
