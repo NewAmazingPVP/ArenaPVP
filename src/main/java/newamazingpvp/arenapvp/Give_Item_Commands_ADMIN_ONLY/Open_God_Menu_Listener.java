@@ -75,6 +75,14 @@ public class Open_God_Menu_Listener implements Listener {
 
             }
 
+            if (event.getCurrentItem().getDisplayName().equalsIgnoreCase(ChatColor.GREEN + "" + ChatColor.BOLD + "Golden Bread" + ChatColor.DARK_AQUA + " [Item]") && event.getCurrentItem().getType() == Material.BREAD) {
+
+                player.getInventory().addItem(GoldBread());
+                player.playSound(player.getLocation(), Sound.BLOCK_NOTE_BLOCK_PLING, 1.0f, 2.0f);
+                event.setCancelled(true);
+
+            }
+
 
             event.setCancelled(true);
         }
