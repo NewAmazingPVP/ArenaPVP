@@ -24,7 +24,7 @@ public class OnlinePlayers implements CommandExecutor {
             player.sendMessage(ChatColor.RED + "How the fuck did you run this command!?!?!??!?!?!!!!??!?!??????");
         }
         if (onlineplayers == 1) {
-            player.sendMessage(ChatColor.GREEN + "" + ChatColor.BOLD + "There is only " + onlineplayers + " player online");
+            player.sendMessage(ChatColor.GREEN + "" + ChatColor.BOLD + "There is only " + onlineplayers + " player online" + ChatColor.RED + " L u have no friends bozo");
         } else {
             player.sendMessage(ChatColor.GREEN + "" + ChatColor.BOLD + "There are " + onlineplayers + " players online");
         }
