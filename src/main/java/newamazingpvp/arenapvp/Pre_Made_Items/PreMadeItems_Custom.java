@@ -108,5 +108,36 @@ public class PreMadeItems_Custom {
 
         return GoldBread;
     }
+
+    public static ItemStack IceCube () {
+
+        ItemStack IceCube = new ItemStack(Material.ICE);
+        ItemMeta SI = IceCube.getItemMeta();
+        SI.addEnchant(Enchantment.DURABILITY, 1, false);
+        SI.addItemFlags(ItemFlag.HIDE_ENCHANTS);
+        SI.setDisplayName(ChatColor.GREEN + "" + ChatColor.BOLD + "Ice Cube" + ChatColor.DARK_AQUA + " [Item]");
+        SI.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
+        List<String> BL = new ArrayList<>();
+        BL.add(ChatColor.YELLOW + "" + ChatColor.BOLD + "Right Click:" + ChatColor.DARK_PURPLE + " Freeze the closest player!");
+        BL.add(ChatColor.RED + "One time use, Can freeze you.");
+        SI.setLore(BL);
+        IceCube.setItemMeta(SI);
+
+        return IceCube;
+    }
+
+    public static ItemStack Vile () {
+
+        ItemStack Vile = new ItemStack(Material.COAL);
+        ItemMeta SI = Vile.getItemMeta();
+        SI.setDisplayName(ChatColor.GREEN + "" + ChatColor.BOLD + "Chunk of Vile" + ChatColor.DARK_AQUA + " [Item]");
+        SI.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
+        List<String> BL = new ArrayList<>();
+        BL.add(ChatColor.DARK_PURPLE + "Used for different things.");
+        SI.setLore(BL);
+        Vile.setItemMeta(SI);
+
+        return Vile;
+    }
 }
 

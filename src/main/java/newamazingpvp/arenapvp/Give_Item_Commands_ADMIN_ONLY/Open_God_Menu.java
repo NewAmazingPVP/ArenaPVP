@@ -59,9 +59,9 @@ public class Open_God_Menu implements CommandExecutor {
         godMenu.setItem(14, MysticBox());
         godMenu.setItem(15, SpeedFeather());
         godMenu.setItem(16, GoldBread());
-        /*Guide.setItem(19, compact2);
-        Guide.setItem(20, bindingchest);
-        Guide.setItem(21, fearmongerperl);
+        godMenu.setItem(19, IceCube());
+        godMenu.setItem(20, Vile());
+        /*Guide.setItem(21, fearmongerperl);
         Guide.setItem(22, OreMixture);
         Guide.setItem(23, Mixedeye);
         Guide.setItem(24, corruptedHandle);

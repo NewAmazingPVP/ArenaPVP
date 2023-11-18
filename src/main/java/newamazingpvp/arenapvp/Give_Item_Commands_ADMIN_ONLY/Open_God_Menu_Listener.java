@@ -83,6 +83,22 @@ public class Open_God_Menu_Listener implements Listener {
 
             }
 
+            if (event.getCurrentItem().getDisplayName().equalsIgnoreCase(ChatColor.GREEN + "" + ChatColor.BOLD + "Ice Cube" + ChatColor.DARK_AQUA + " [Item]") && event.getCurrentItem().getType() == Material.ICE) {
+
+                player.getInventory().addItem(IceCube());
+                player.playSound(player.getLocation(), Sound.BLOCK_NOTE_BLOCK_PLING, 1.0f, 2.0f);
+                event.setCancelled(true);
+
+            }
+
+            if (event.getCurrentItem().getDisplayName().equalsIgnoreCase(ChatColor.GREEN + "" + ChatColor.BOLD + "Chunk of Vile" + ChatColor.DARK_AQUA + " [Item]") && event.getCurrentItem().getType() == Material.COAL) {
+
+                player.getInventory().addItem(Vile());
+                player.playSound(player.getLocation(), Sound.BLOCK_NOTE_BLOCK_PLING, 1.0f, 2.0f);
+                event.setCancelled(true);
+
+            }
+
 
             event.setCancelled(true);
         }
