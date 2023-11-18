@@ -17,7 +17,7 @@ public class PreMadeItems_Custom {
         ItemMeta SI = InstaBoomTNT.getItemMeta();
         SI.addEnchant(Enchantment.DURABILITY, 1, false);
         SI.addItemFlags(ItemFlag.HIDE_ENCHANTS);
-        SI.setDisplayName(ChatColor.GREEN + "" + ChatColor.BOLD + "InstaBoom TNT" + ChatColor.AQUA + " [Item]");
+        SI.setDisplayName(ChatColor.GREEN + "" + ChatColor.BOLD + "InstaBoom TNT" + ChatColor.DARK_AQUA + " [Item]");
         SI.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
         List<String> BL = new ArrayList<>();
         BL.add(ChatColor.YELLOW + "" + ChatColor.BOLD + "Right Click:");

@@ -27,7 +27,7 @@ public class InstaBoom_TNT implements Listener {
         ItemMeta meta = item.getItemMeta();
 
         Location location = e.getBlock().getLocation();
-        if (meta != null && meta.hasDisplayName() && meta.getDisplayName().equals(ChatColor.GREEN + "" + ChatColor.BOLD + "InstaBoom TNT" + ChatColor.AQUA + " [Item]")) {
+        if (meta != null && meta.hasDisplayName() && meta.getDisplayName().equals(ChatColor.GREEN + "" + ChatColor.BOLD + "InstaBoom TNT" + ChatColor.DARK_AQUA + " [Item]")) {
             location.getWorld().spawnParticle(Particle.EXPLOSION_LARGE, location, 10);
             e.setCancelled(true);
             for (Player onlineplayer : Bukkit.getOnlinePlayers()) {
