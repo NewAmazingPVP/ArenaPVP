@@ -74,5 +74,22 @@ public class PreMadeItems_Custom {
 
         return MysticBox;
     }
+
+    public static ItemStack SpeedFeather() {
+
+        ItemStack SpeedFeather = new ItemStack(Material.FEATHER);
+        ItemMeta SI = SpeedFeather.getItemMeta();
+        SI.addEnchant(Enchantment.DURABILITY, 1, false);
+        SI.addItemFlags(ItemFlag.HIDE_ENCHANTS);
+        SI.setDisplayName(ChatColor.GREEN + "" + ChatColor.BOLD + "Speed Feather" + ChatColor.DARK_AQUA + " [Item]");
+        SI.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
+        List<String> BL = new ArrayList<>();
+        BL.add(ChatColor.YELLOW + "" + ChatColor.BOLD + "Right Click:" + ChatColor.DARK_PURPLE + " Get speed for a few sec!");
+        BL.add(ChatColor.RED + "One time use.");
+        SI.setLore(BL);
+        SpeedFeather.setItemMeta(SI);
+
+        return SpeedFeather;
+    }
 }
 

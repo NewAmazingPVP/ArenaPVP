@@ -57,8 +57,8 @@ public class Open_God_Menu implements CommandExecutor {
         godMenu.setItem(12, startIronSword());
         godMenu.setItem(13, InstaBoomTNT());
         godMenu.setItem(14, MysticBox());
-        /*Guide.setItem(15, dsword);
-        Guide.setItem(16, compact);
+        godMenu.setItem(15, SpeedFeather());
+        /*Guide.setItem(16, compact);
         Guide.setItem(19, compact2);
         Guide.setItem(20, bindingchest);
         Guide.setItem(21, fearmongerperl);

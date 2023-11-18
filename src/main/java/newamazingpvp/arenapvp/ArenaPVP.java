@@ -1,6 +1,7 @@
 package newamazingpvp.arenapvp;
 
 import newamazingpvp.arenapvp.Custom_Item_Listeners.InstaBoom_TNT;
+import newamazingpvp.arenapvp.Custom_Item_Listeners.Speed_Feather;
 import newamazingpvp.arenapvp.General_Listeners.*;
 import newamazingpvp.arenapvp.Give_Item_Commands_ADMIN_ONLY.Open_God_Menu;
 import newamazingpvp.arenapvp.Give_Item_Commands_ADMIN_ONLY.Open_God_Menu_Listener;
@@ -48,6 +49,8 @@ public final class ArenaPVP extends JavaPlugin {
         getServer().getPluginManager().registerEvents(new Open_God_Menu_Listener(), this);
         //getServer().getPluginManager().registerEvents(new Prevrnt_Invintory_Slots(), this);
         getServer().getPluginManager().registerEvents(new Mystic_Box(), this);
+        getServer().getPluginManager().registerEvents(new Speed_Feather(), this);
+
 
 
         //commands
