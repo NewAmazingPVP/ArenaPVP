@@ -24,6 +24,7 @@ public class Gold_Bread implements Listener {
                     && item.getItemMeta().getDisplayName().equals(ChatColor.GREEN + "" + ChatColor.BOLD + "Golden Bread" + ChatColor.DARK_AQUA + " [Item]")) {
                 player.playSound(player.getLocation(), Sound.ENTITY_GENERIC_EAT, 1.0f, 1.0f);
                 player.addPotionEffect(new PotionEffect(PotionEffectType.ABSORPTION, 999999999, 1));
+                event.setCancelled(true);
                 if (item.getAmount() > 1) {
                     item.setAmount(item.getAmount() - 1);
                     player.getInventory().setItemInMainHand(item);
