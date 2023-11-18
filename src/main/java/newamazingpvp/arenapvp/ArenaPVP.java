@@ -1,6 +1,7 @@
 package newamazingpvp.arenapvp;
 
 import newamazingpvp.arenapvp.Custom_Item_Listeners.Gold_Bread;
+import newamazingpvp.arenapvp.Custom_Item_Listeners.Ice_Cube;
 import newamazingpvp.arenapvp.Custom_Item_Listeners.InstaBoom_TNT;
 import newamazingpvp.arenapvp.Custom_Item_Listeners.Speed_Feather;
 import newamazingpvp.arenapvp.General_Listeners.*;
@@ -52,7 +53,7 @@ public final class ArenaPVP extends JavaPlugin {
         getServer().getPluginManager().registerEvents(new Mystic_Box(), this);
         getServer().getPluginManager().registerEvents(new Speed_Feather(), this);
         getServer().getPluginManager().registerEvents(new Gold_Bread(), this);
-
+        getServer().getPluginManager().registerEvents(new Ice_Cube(), this);
 
 
 
