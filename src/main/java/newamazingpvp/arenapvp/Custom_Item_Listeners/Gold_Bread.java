@@ -20,7 +20,7 @@ public class Gold_Bread implements Listener {
         ItemStack item = player.getInventory().getItemInMainHand();
 
         if (event.getAction() == Action.RIGHT_CLICK_AIR || event.getAction() == Action.RIGHT_CLICK_BLOCK) {
-            if (item.getType() == Material.FEATHER && item.hasItemMeta() && item.getItemMeta().hasDisplayName()
+            if (item.getType() == Material.BREAD && item.hasItemMeta() && item.getItemMeta().hasDisplayName()
                     && item.getItemMeta().getDisplayName().equals(ChatColor.GREEN + "" + ChatColor.BOLD + "Golden Bread" + ChatColor.DARK_AQUA + " [Item]")) {
                 player.playSound(player.getLocation(), Sound.ENTITY_GENERIC_EAT, 1.0f, 1.0f);
                 player.addPotionEffect(new PotionEffect(PotionEffectType.ABSORPTION, 999999999, 1));
