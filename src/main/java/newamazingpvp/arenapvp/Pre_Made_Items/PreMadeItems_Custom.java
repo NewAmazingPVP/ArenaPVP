@@ -101,7 +101,7 @@ public class PreMadeItems_Custom {
         SI.setDisplayName(ChatColor.GREEN + "" + ChatColor.BOLD + "Golden Bread" + ChatColor.DARK_AQUA + " [Item]");
         SI.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
         List<String> BL = new ArrayList<>();
-        BL.add(ChatColor.YELLOW + "" + ChatColor.BOLD + "Right Click:" + ChatColor.DARK_PURPLE + " Get +1 absorption heart!");
+        BL.add(ChatColor.YELLOW + "" + ChatColor.BOLD + "Right Click:" + ChatColor.DARK_PURPLE + " Get regeneration for a few sec!");
         BL.add(ChatColor.RED + "One time use.");
         SI.setLore(BL);
         GoldBread.setItemMeta(SI);
