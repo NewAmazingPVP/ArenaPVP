@@ -26,18 +26,27 @@ public class Ice_Cube implements Listener {
         Player player = e.getPlayer();
         ItemStack item = e.getItemInHand();
         ItemMeta meta = item.getItemMeta();
+        Player closestPlayer = null;
+        double minDistance = Double.MAX_VALUE;
 
         Location location = e.getBlock().getLocation();
         if (meta != null && meta.hasDisplayName() && meta.getDisplayName().equals(ChatColor.GREEN + "" + ChatColor.BOLD + "Ice Cube" + ChatColor.DARK_AQUA + " [Item]")) {
             location.getWorld().spawnParticle(Particle.EXPLOSION_LARGE, location, 10);
             e.setCancelled(true);
             for (Player onlineplayer : Bukkit.getOnlinePlayers()) {
-                onlineplayer.playSound(player.getLocation(), Sound.ENTITY_GENERIC_EXPLODE, 1.0f, 1.0f);
-                List<Player> nearbyPlayers = (List<Player>) location.getWorld().getNearbyPlayers(location, 5);
-                for (Player playernear : nearbyPlayers) {
-                    playernear.addPotionEffect(new PotionEffect(PotionEffectType.BLINDNESS, 10, 5));
-                    playernear.addScoreboardTag("frozen");
-                    Bukkit.getScheduler().runTaskLater(arenaPVP, () -> playernear.removeScoreboardTag("frozen"), 100);
+
+                double distance = player.getLocation().distance(location);
+                if (distance < minDistance) {
+                    minDistance = distance;
+                    closestPlayer = player;
+                }
+                if (closestPlayer != null) {
+
+                    closestPlayer.addPotionEffect(new PotionEffect(PotionEffectType.BLINDNESS, 10, 5));
+                    closestPlayer.addScoreboardTag("frozen");
+                    Player finalClosestPlayer = closestPlayer;
+                    Bukkit.getScheduler().runTaskLater(arenaPVP, () -> finalClosestPlayer.removeScoreboardTag("frozen"), 40);
+
                 }
             }
             if (item.getAmount() > 1) {
