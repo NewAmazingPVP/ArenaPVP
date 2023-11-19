@@ -62,7 +62,6 @@ public final class ArenaPVP extends JavaPlugin {
 
 
 
-
         //commands
         getCommand("howmanyplayersareonline").setExecutor(new OnlinePlayers());
         getCommand("open_god_menu").setExecutor(new Open_God_Menu());
