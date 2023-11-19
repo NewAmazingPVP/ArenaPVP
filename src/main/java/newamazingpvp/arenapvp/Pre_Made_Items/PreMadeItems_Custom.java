@@ -118,7 +118,7 @@ public class PreMadeItems_Custom {
         SI.setDisplayName(ChatColor.GREEN + "" + ChatColor.BOLD + "Ice Cube" + ChatColor.DARK_AQUA + " [Item]");
         SI.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
         List<String> BL = new ArrayList<>();
-        BL.add(ChatColor.YELLOW + "" + ChatColor.BOLD + "Right Click:" + ChatColor.DARK_PURPLE + " Freeze the closest player!");
+        BL.add(ChatColor.YELLOW + "" + ChatColor.BOLD + "Right Click:" + ChatColor.DARK_PURPLE + " Freeze the closest player for a few sec!");
         BL.add(ChatColor.RED + "One time use, Can freeze you.");
         SI.setLore(BL);
         IceCube.setItemMeta(SI);

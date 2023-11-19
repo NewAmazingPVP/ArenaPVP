@@ -33,6 +33,7 @@ public class Ice_Cube implements Listener {
         if (meta != null && meta.hasDisplayName() && meta.getDisplayName().equals(ChatColor.GREEN + "" + ChatColor.BOLD + "Ice Cube" + ChatColor.DARK_AQUA + " [Item]")) {
             location.getWorld().spawnParticle(Particle.EXPLOSION_LARGE, location, 10);
             e.setCancelled(true);
+            player.playSound(player.getLocation(), Sound.BLOCK_GLASS_BREAK, 1.0f, 1.0f);
             for (Player onlineplayer : Bukkit.getOnlinePlayers()) {
 
                 double distance = player.getLocation().distance(location);
@@ -46,6 +47,7 @@ public class Ice_Cube implements Listener {
                     closestPlayer.addScoreboardTag("frozen");
                     Player finalClosestPlayer = closestPlayer;
                     Bukkit.getScheduler().runTaskLater(arenaPVP, () -> finalClosestPlayer.removeScoreboardTag("frozen"), 40);
+                    closestPlayer.playSound(player.getLocation(), Sound.ENTITY_GENERIC_EXPLODE, 1.0f, 0.0f);
 
                 }
             }
