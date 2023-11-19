@@ -14,8 +14,13 @@ import newamazingpvp.arenapvp.Kill_Streak_Info.Kill_Listener;
 import newamazingpvp.arenapvp.Upgrades_Menu.MainUpgradeMenu;
 import newamazingpvp.arenapvp.User_Commands.OnlinePlayers;
 import newamazingpvp.arenapvp.utility.DataBaseHelper;
+import org.bukkit.Bukkit;
+import org.bukkit.ChatColor;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.plugin.java.JavaPlugin;
+import org.bukkit.scoreboard.Scoreboard;
+import org.bukkit.scoreboard.ScoreboardManager;
+import org.bukkit.scoreboard.Team;
 
 import java.io.File;
 import java.sql.ResultSet;
@@ -63,6 +68,14 @@ public final class ArenaPVP extends JavaPlugin {
         getCommand("open_god_menu").setExecutor(new Open_God_Menu());
         getCommand("pit_restart_server").setExecutor(new Pit_Server_Restart());
         getCommand("quick_pit_restart_server").setExecutor(new Quick_Pit_Server_Restart());
+
+        //Teams (AKA Level and Mega streaks
+        ScoreboardManager manager = Bukkit.getScoreboardManager();
+        Scoreboard board = manager.getNewScoreboard();
+        Team overdrive = board.registerNewTeam("OverDrive");
+        overdrive.setDisplayName(ChatColor.RED + "" + ChatColor.BOLD + "[Overdrive]");
+
+
 
         //database
         dataBaseHelper = new DataBaseHelper(getDataFolder().getAbsolutePath() + File.separator + "example.db");

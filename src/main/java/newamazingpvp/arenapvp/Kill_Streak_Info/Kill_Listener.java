@@ -14,7 +14,7 @@ import static newamazingpvp.arenapvp.Pre_Made_Items.PreMadeItems_Custom.MysticBo
 
 public class Kill_Listener implements Listener {
 
-    private final HashMap<UUID, Integer> streaks = new HashMap<>();
+    static final HashMap<UUID, Integer> streaks = new HashMap<>();
 
     @EventHandler
     public void onPlayerInteract(EntityDeathEvent e) {
