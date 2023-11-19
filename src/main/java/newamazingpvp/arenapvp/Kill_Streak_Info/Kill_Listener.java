@@ -25,8 +25,8 @@ public class Kill_Listener implements Listener {
 
         if (streaks.containsKey(uuid)) {
             streaks.put(uuid, streaks.get(uuid) + 1);
-        } else {
-            streaks.put(uuid, 1);
+        //} else {
+            //streaks.put(uuid, 1);
 
 
             if (Math.random() < 0.5) {
