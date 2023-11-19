@@ -47,7 +47,7 @@ public class Ice_Cube implements Listener {
                     closestPlayer.addScoreboardTag("frozen");
                     Player finalClosestPlayer = closestPlayer;
                     Bukkit.getScheduler().runTaskLater(arenaPVP, () -> finalClosestPlayer.removeScoreboardTag("frozen"), 40);
-                    closestPlayer.playSound(player.getLocation(), Sound.ENTITY_GENERIC_EXPLODE, 1.0f, 0.0f);
+                    closestPlayer.playSound(player.getLocation(), Sound.ENTITY_PLAYER_HURT_FREEZE, 1.0f, 0.0f);
 
                 }
             }
