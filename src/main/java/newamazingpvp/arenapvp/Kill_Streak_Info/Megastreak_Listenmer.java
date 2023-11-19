@@ -1,5 +1,6 @@
 package newamazingpvp.arenapvp.Kill_Streak_Info;
 
+import org.bukkit.ChatColor;
 import org.bukkit.Location;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
@@ -14,8 +15,8 @@ public class Megastreak_Listenmer implements Listener {
     public void onPlayerInteract(EntityDeathEvent e) {
 
         Player killer = e.getEntity().getKiller();
-
-        if(killer streaks)
+        
+        killer.sendMessage(ChatColor.GOLD + "test" + streaks);
 
 
     }
